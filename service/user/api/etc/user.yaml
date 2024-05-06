@@ -1,0 +1,36 @@
+Name: User
+Host: 0.0.0.0
+Port: 8888
+
+Mysql:
+    Host: 192.168.152.129
+    Port: 3306
+    DbName: openui
+    User: root
+    Password: "123456"
+    DBZone: "TS"
+    Charset: utf8mb4
+    MaxIdle: 10
+    MaxOpen: 100
+    LogMode: true
+    Loc: Asia/Shanghai
+    Debug: true
+    TablePrefix: "v1_"
+    MaxLifetime: 300
+
+CacheRedis:
+    Name: "openui"
+    Nettype: "tcp"
+    Address: "192.168.152.129:6379"
+    Auth: ""
+    DB: 0
+
+Auth:
+    AccessSecret: uOvKLmISJKyuOpNYd4Z0I1SiT7MweJhl
+    AccessExpire: 86400
+
+UserRpc:
+    Etcd:
+        Hosts:
+            - 192.168.152.129:2389
+        Key: user.rpc
