@@ -1,7 +1,7 @@
 package model
 
 import (
-    "openui-backend-go/common/database"
+	"github.com/openui-backend-go/common/database"
 )
 
 var _ UserModel = (*customUserModel)(nil)

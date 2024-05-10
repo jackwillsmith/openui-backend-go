@@ -2,6 +2,7 @@ package config
 
 import (
 	"github.com/openui-backend-go/common/database"
+
 	"github.com/zeromicro/go-zero/zrpc"
 )
 

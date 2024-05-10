@@ -6,9 +6,9 @@ package server
 import (
 	"context"
 
-	"openui-backend-go/service/user/rpc/internal/logic"
-	"openui-backend-go/service/user/rpc/internal/svc"
-	"openui-backend-go/service/user/rpc/user"
+	"github.com/openui-backend-go/user-rpc/internal/logic"
+	"github.com/openui-backend-go/user-rpc/internal/svc"
+	"github.com/openui-backend-go/user-rpc/user"
 )
 
 type UserServer struct {

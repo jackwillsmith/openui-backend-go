@@ -4,7 +4,450 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2cbffd38-95a8-4346-ac5a-d47e5b5f3fa7" name="更改" comment="" />
+    <list default="true" id="2cbffd38-95a8-4346-ac5a-d47e5b5f3fa7" name="更改" comment="">
+      <change beforePath="$PROJECT_DIR$/../Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../all_build.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../article-rpc-service/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../article-rpc-service/CONTRIBUTORS.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../article-rpc-service/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../article-rpc-service/article.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../article-rpc-service/articlerpcservice/articlerpcservice.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../article-rpc-service/cmd/main.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../article-rpc-service/etc/config.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../article-rpc-service/etc/rbac.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../article-rpc-service/go.mod" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../article-rpc-service/internal/config/config.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../article-rpc-service/internal/dao/article.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../article-rpc-service/internal/dao/common.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../article-rpc-service/internal/dao/dao.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../article-rpc-service/internal/dao/label.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../article-rpc-service/internal/logic/addarticlelogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../article-rpc-service/internal/logic/addlabellogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../article-rpc-service/internal/logic/articleinfologic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../article-rpc-service/internal/logic/deletearticlelogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../article-rpc-service/internal/logic/deletelabellogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../article-rpc-service/internal/logic/editarticlelogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../article-rpc-service/internal/logic/labelinfologic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../article-rpc-service/internal/logic/listarticlelogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../article-rpc-service/internal/logic/listlabellogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../article-rpc-service/internal/logic/reviewarticlelogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../article-rpc-service/internal/logic/updatelabellogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../article-rpc-service/internal/model/article.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../article-rpc-service/internal/model/article_label.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../article-rpc-service/internal/model/label.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../article-rpc-service/internal/model/permission.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../article-rpc-service/internal/server/articlerpcserviceserver.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../article-rpc-service/internal/svc/servicecontext.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../article-rpc-service/internal/types/status.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../article-rpc-service/pb/article/article.pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../article-rpc-service/pb/article/article_grpc.pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../article-rpc-service/version" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../captcha-rpc-service/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../captcha-rpc-service/CONTRIBUTORS.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../captcha-rpc-service/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../captcha-rpc-service/captcha.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../captcha-rpc-service/captcharpcservice/captcharpcservice.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../captcha-rpc-service/cmd/main.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../captcha-rpc-service/etc/config.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../captcha-rpc-service/etc/rbac.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../captcha-rpc-service/go.mod" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../captcha-rpc-service/internal/config/config.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../captcha-rpc-service/internal/dao/common.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../captcha-rpc-service/internal/dao/dao.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../captcha-rpc-service/internal/logic/captchageneratelogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../captcha-rpc-service/internal/server/captcharpcserviceserver.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../captcha-rpc-service/internal/svc/servicecontext.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../captcha-rpc-service/pb/captcha/captcha.pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../captcha-rpc-service/pb/captcha/captcha_grpc.pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../captcha-rpc-service/version" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../clean_trash.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cloudc-rpc-service/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cloudc-rpc-service/CONTRIBUTORS.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cloudc-rpc-service/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cloudc-rpc-service/cloudc.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cloudc-rpc-service/cloudcservice/cloudcservice.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cloudc-rpc-service/cmd/main.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cloudc-rpc-service/etc/config.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cloudc-rpc-service/etc/rbac.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cloudc-rpc-service/go.mod" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cloudc-rpc-service/internal/config/config.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cloudc-rpc-service/internal/dao/common.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cloudc-rpc-service/internal/dao/dao.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cloudc-rpc-service/internal/logic/captchaconfiggetalllogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cloudc-rpc-service/internal/logic/captchaconfiggetlogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cloudc-rpc-service/internal/logic/captchaconfigsetlogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cloudc-rpc-service/internal/logic/douyinconfiggetalllogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cloudc-rpc-service/internal/logic/douyinconfiggetlogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cloudc-rpc-service/internal/logic/douyinconfigsetlogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cloudc-rpc-service/internal/logic/emsconfiggetalllogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cloudc-rpc-service/internal/logic/emsconfiggetlogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cloudc-rpc-service/internal/logic/emsconfigsetlogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cloudc-rpc-service/internal/logic/ossconfiggetalllogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cloudc-rpc-service/internal/logic/ossconfiggetlogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cloudc-rpc-service/internal/logic/ossconfigsetlogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cloudc-rpc-service/internal/logic/pushconfiggetalllogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cloudc-rpc-service/internal/logic/pushconfiggetlogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cloudc-rpc-service/internal/logic/pushconfigsetlogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cloudc-rpc-service/internal/logic/slsconfiggetalllogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cloudc-rpc-service/internal/logic/slsconfiggetlogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cloudc-rpc-service/internal/logic/slsconfigsetlogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cloudc-rpc-service/internal/logic/smsconfiggetalllogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cloudc-rpc-service/internal/logic/smsconfiggetlogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cloudc-rpc-service/internal/logic/smsconfigsetlogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cloudc-rpc-service/internal/logic/systemconfiggetalllogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cloudc-rpc-service/internal/logic/systemconfiggetlogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cloudc-rpc-service/internal/logic/systemconfigsetlogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cloudc-rpc-service/internal/logic/wechatconfiggetalllogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cloudc-rpc-service/internal/logic/wechatconfiggetlogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cloudc-rpc-service/internal/logic/wechatconfigsetlogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cloudc-rpc-service/internal/model/CaptchaConfig.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cloudc-rpc-service/internal/model/DouyinConfig.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cloudc-rpc-service/internal/model/EmsConfig.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cloudc-rpc-service/internal/model/OssConfig.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cloudc-rpc-service/internal/model/PushConfig.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cloudc-rpc-service/internal/model/ServerConfig.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cloudc-rpc-service/internal/model/SmsConfig.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cloudc-rpc-service/internal/model/SystemConfig.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cloudc-rpc-service/internal/model/WechatConfig.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cloudc-rpc-service/internal/server/cloudcserviceserver.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cloudc-rpc-service/internal/svc/servicecontext.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cloudc-rpc-service/pb/cloudc/cloudc.pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cloudc-rpc-service/pb/cloudc/cloudc_grpc.pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cloudc-rpc-service/version" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ems-rpc-service/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ems-rpc-service/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ems-rpc-service/CONTRIBUTORS.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ems-rpc-service/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ems-rpc-service/cmd/main.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ems-rpc-service/ems.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ems-rpc-service/emsrpcservice/emsrpcservice.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ems-rpc-service/etc/config.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ems-rpc-service/etc/rbac.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ems-rpc-service/go.mod" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ems-rpc-service/internal/config/config.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ems-rpc-service/internal/dao/common.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ems-rpc-service/internal/dao/dao.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ems-rpc-service/internal/logic/checkemsrpclogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ems-rpc-service/internal/logic/sendemsrpclogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ems-rpc-service/internal/model/ems.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ems-rpc-service/internal/server/emsrpcserviceserver.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ems-rpc-service/internal/svc/servicecontext.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ems-rpc-service/internal/types/ems.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ems-rpc-service/pb/ems/ems.pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ems-rpc-service/pb/ems/ems_grpc.pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ems-rpc-service/version" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../iot-rpc-service/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../iot-rpc-service/CONTRIBUTORS.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../iot-rpc-service/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../iot-rpc-service/cmd/main.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../iot-rpc-service/etc/config.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../iot-rpc-service/etc/rbac.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../iot-rpc-service/go.mod" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../iot-rpc-service/internal/config/config.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../iot-rpc-service/internal/dao/common.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../iot-rpc-service/internal/dao/dao.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../iot-rpc-service/internal/dao/dao.home.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../iot-rpc-service/internal/dao/strategy.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../iot-rpc-service/internal/logic/devicequeryfromfactorydevicelogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../iot-rpc-service/internal/logic/homecreatelogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../iot-rpc-service/internal/logic/homedeleteidslogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../iot-rpc-service/internal/logic/homedeletelogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../iot-rpc-service/internal/logic/homequerylistlogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../iot-rpc-service/internal/logic/homequerylogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../iot-rpc-service/internal/logic/homeupdatelogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../iot-rpc-service/internal/logic/homeupdatestatuslogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../iot-rpc-service/internal/logic/membercreatelogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../iot-rpc-service/internal/logic/memberdeleteidslogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../iot-rpc-service/internal/logic/memberdeletelogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../iot-rpc-service/internal/logic/memberquerylistlogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../iot-rpc-service/internal/logic/memberquerylogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../iot-rpc-service/internal/logic/memberupdatelogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../iot-rpc-service/internal/logic/memberupdatestatuslogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../iot-rpc-service/internal/logic/roomcreatelogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../iot-rpc-service/internal/logic/roomdeleteidslogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../iot-rpc-service/internal/logic/roomdeletelogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../iot-rpc-service/internal/logic/roomquerylistlogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../iot-rpc-service/internal/logic/roomquerylogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../iot-rpc-service/internal/logic/roomupdatelogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../iot-rpc-service/internal/logic/roomupdatestatuslogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../iot-rpc-service/internal/model/home.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../iot-rpc-service/internal/model/member.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../iot-rpc-service/internal/model/room.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../iot-rpc-service/internal/server/iotserviceserver.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../iot-rpc-service/internal/svc/servicecontext.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../iot-rpc-service/internal/types/home.role.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../iot-rpc-service/internal/types/status.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../iot-rpc-service/iot.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../iot-rpc-service/iotservice/iotservice.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../iot-rpc-service/pb/iot/iot.pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../iot-rpc-service/pb/iot/iot_grpc.pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../iot-rpc-service/version" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jobs-rpc-service/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jobs-rpc-service/CONTRIBUTORS.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jobs-rpc-service/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jobs-rpc-service/cmd/main.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jobs-rpc-service/crontab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jobs-rpc-service/etc/config.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jobs-rpc-service/go.mod" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jobs-rpc-service/internal/config/config.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jobs-rpc-service/internal/dao/common.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jobs-rpc-service/internal/dao/dao.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jobs-rpc-service/internal/logic/wechatofficialaccountaccesstokenlogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jobs-rpc-service/internal/model/WechatConfig.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jobs-rpc-service/internal/server/jobrpcserviceserver.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jobs-rpc-service/internal/svc/servicecontext.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jobs-rpc-service/internal/svc/svc.wechat.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jobs-rpc-service/internal/types/wechat.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jobs-rpc-service/job.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jobs-rpc-service/jobrpcservice/jobrpcservice.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jobs-rpc-service/pb/job/job.pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jobs-rpc-service/pb/job/job_grpc.pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jobs-rpc-service/version" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/consts/consts.go" beforeDir="false" afterPath="$PROJECT_DIR$/common/consts/consts.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/jwtx/jwt.go" beforeDir="false" afterPath="$PROJECT_DIR$/common/jwtx/jwt.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/common/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/common/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/user/model/user.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/user/model/usermodel.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/user/model/usermodel_client.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/user/rpc/internal/config/config.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/user/rpc/internal/config/config.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/user/rpc/internal/logic/loginlogic.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/user/rpc/internal/logic/loginlogic.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/user/rpc/internal/logic/registerlogic.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/user/rpc/internal/logic/registerlogic.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/user/rpc/internal/logic/userinfologic.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/user/rpc/internal/logic/userinfologic.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/user/rpc/internal/server/userserver.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/user/rpc/internal/server/userserver.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/user/rpc/internal/svc/servicecontext.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/user/rpc/internal/svc/servicecontext.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/user/rpc/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/user/rpc/user.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/user/rpc/userclient/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/user/rpc/userclient/user.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oss-rpc-service/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oss-rpc-service/CONTRIBUTORS.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oss-rpc-service/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oss-rpc-service/cmd/main.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oss-rpc-service/etc/config.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oss-rpc-service/etc/rbac.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oss-rpc-service/go.mod" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oss-rpc-service/internal/config/config.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oss-rpc-service/internal/dao/common.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oss-rpc-service/internal/dao/dao.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oss-rpc-service/internal/logic/callbacklogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oss-rpc-service/internal/logic/checkuploadresultlogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oss-rpc-service/internal/logic/generateuploadsignlogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oss-rpc-service/internal/model/OssConfig.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oss-rpc-service/internal/server/ossrpcserviceserver.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oss-rpc-service/internal/svc/servicecontext.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oss-rpc-service/oss.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oss-rpc-service/ossrpcservice/ossrpcservice.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oss-rpc-service/pb/oss/oss.pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oss-rpc-service/pb/oss/oss_grpc.pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oss-rpc-service/version" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project-dirs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../push-rpc-service/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../push-rpc-service/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../push-rpc-service/CONTRIBUTORS.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../push-rpc-service/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../push-rpc-service/cmd/main.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../push-rpc-service/etc/config.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../push-rpc-service/etc/jiachao.p12" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../push-rpc-service/etc/jiachaoSandbox.p12" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../push-rpc-service/etc/rbac.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../push-rpc-service/go.mod" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../push-rpc-service/internal/config/config.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../push-rpc-service/internal/dao/common.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../push-rpc-service/internal/dao/dao.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../push-rpc-service/internal/logic/huaweipushlogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../push-rpc-service/internal/logic/iospushlogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../push-rpc-service/internal/logic/xiaomipushlogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../push-rpc-service/internal/model/PushConfig.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../push-rpc-service/internal/model/pushLog.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../push-rpc-service/internal/server/pushrpcserviceserver.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../push-rpc-service/internal/svc/servicecontext.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../push-rpc-service/internal/types/huawei.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../push-rpc-service/internal/types/ios.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../push-rpc-service/internal/types/xiaomi.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../push-rpc-service/pb/push/push.pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../push-rpc-service/pb/push/push_grpc.pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../push-rpc-service/push.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../push-rpc-service/pushrpcservice/pushrpcservice.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../push-rpc-service/utils/common.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../push-rpc-service/utils/pushkit/go.mod" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../push-rpc-service/utils/pushkit/httpclient/httpclient.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../push-rpc-service/utils/pushkit/push/authention/auth.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../push-rpc-service/utils/pushkit/push/config/config.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../push-rpc-service/utils/pushkit/push/constant/constants.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../push-rpc-service/utils/pushkit/push/constant/urlfmt.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../push-rpc-service/utils/pushkit/push/core/message.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../push-rpc-service/utils/pushkit/push/core/pushclient.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../push-rpc-service/utils/pushkit/push/model/message.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../push-rpc-service/utils/pushkit/push/model/message_hm.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../push-rpc-service/utils/pushkit/push/model/message_webpush.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../push-rpc-service/utils/pushkit/push/verify/messaging_hm_verify.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../push-rpc-service/utils/pushkit/push/verify/messaging_verify.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../push-rpc-service/utils/pushkit/push/verify/messaging_webpush_verify.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../push-rpc-service/utils/xiaomipush/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../push-rpc-service/utils/xiaomipush/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../push-rpc-service/utils/xiaomipush/client.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../push-rpc-service/utils/xiaomipush/client_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../push-rpc-service/utils/xiaomipush/constants.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../push-rpc-service/utils/xiaomipush/go.mod" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../push-rpc-service/utils/xiaomipush/go.sum" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../push-rpc-service/utils/xiaomipush/message.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../push-rpc-service/utils/xiaomipush/result.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../push-rpc-service/version" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shield-rpc-service/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shield-rpc-service/CONTRIBUTORS.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shield-rpc-service/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shield-rpc-service/cmd/main.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shield-rpc-service/etc/config.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shield-rpc-service/etc/rbac.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shield-rpc-service/go.mod" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shield-rpc-service/internal/config/config.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shield-rpc-service/internal/dao/common.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shield-rpc-service/internal/dao/dao.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shield-rpc-service/internal/dao/dao.tenant.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shield-rpc-service/internal/dao/dao.tenant.secret.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shield-rpc-service/internal/logic/authloginwithapilogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shield-rpc-service/internal/logic/pinglogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shield-rpc-service/internal/logic/refreshtokenlogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shield-rpc-service/internal/model/company.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shield-rpc-service/internal/model/sys_role.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shield-rpc-service/internal/model/sys_role_permission.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shield-rpc-service/internal/model/tenant.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shield-rpc-service/internal/model/tenant_permission.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shield-rpc-service/internal/model/tenant_secret.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shield-rpc-service/internal/model/verify_record.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shield-rpc-service/internal/server/shieldserviceserver.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shield-rpc-service/internal/svc/servicecontext.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shield-rpc-service/internal/types/initAdmin.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shield-rpc-service/internal/types/request.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shield-rpc-service/internal/types/timeFormat.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shield-rpc-service/internal/types/types.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shield-rpc-service/pb/ems/ems.pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shield-rpc-service/pb/ems/ems_grpc.pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shield-rpc-service/pb/shield/shield.pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shield-rpc-service/pb/shield/shield_grpc.pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shield-rpc-service/pb/sms/sms.pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shield-rpc-service/pb/sms/sms_grpc.pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shield-rpc-service/pb/tenant/tenant.pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shield-rpc-service/pb/tenant/tenant_grpc.pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shield-rpc-service/shield.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shield-rpc-service/shieldservice/shieldservice.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shield-rpc-service/shileld.api" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shield-rpc-service/version" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sms-rpc-service/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sms-rpc-service/cmd/main.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sms-rpc-service/etc/config.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sms-rpc-service/etc/rbac.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sms-rpc-service/go.mod" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sms-rpc-service/internal/config/config.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sms-rpc-service/internal/dao/common.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sms-rpc-service/internal/dao/dao.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sms-rpc-service/internal/dao/sms_log.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sms-rpc-service/internal/logic/checksmslogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sms-rpc-service/internal/logic/sendsmslogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sms-rpc-service/internal/model/sms_log.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sms-rpc-service/internal/server/smsrpcserviceserver.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sms-rpc-service/internal/svc/servicecontext.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sms-rpc-service/pb/sms/sms.pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sms-rpc-service/pb/sms/sms_grpc.pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sms-rpc-service/sms.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sms-rpc-service/smsrpcservice/smsrpcservice.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sms-rpc-service/version" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../syncer-rpc-service/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../syncer-rpc-service/CONTRIBUTORS.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../syncer-rpc-service/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../syncer-rpc-service/cmd/main.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../syncer-rpc-service/etc/config.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../syncer-rpc-service/go.mod" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../syncer-rpc-service/internal/config/config.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../syncer-rpc-service/internal/dao/common.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../syncer-rpc-service/internal/dao/dao.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../syncer-rpc-service/internal/dao/strategy.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../syncer-rpc-service/internal/handler/routes.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../syncer-rpc-service/internal/handler/syncerauthhandler.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../syncer-rpc-service/internal/logic/deletedevmqtttokenlogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../syncer-rpc-service/internal/logic/deleteusermqtttokenlogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../syncer-rpc-service/internal/logic/setdevmqtttokenlogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../syncer-rpc-service/internal/logic/setusermqtttokenlogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../syncer-rpc-service/internal/logic/syncerauthlogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../syncer-rpc-service/internal/middleware/pathinterceptormiddleware.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../syncer-rpc-service/internal/server/syncerrpcserviceserver.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../syncer-rpc-service/internal/svc/servicecontext.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../syncer-rpc-service/internal/types/types.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../syncer-rpc-service/pb/syncer/syncer.pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../syncer-rpc-service/pb/syncer/syncer_grpc.pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../syncer-rpc-service/syncer.api" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../syncer-rpc-service/syncer.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../syncer-rpc-service/syncerrpcservice/syncerrpcservice.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../syncer-rpc-service/version" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tenant-rpc-service/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tenant-rpc-service/CONTRIBUTORS.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tenant-rpc-service/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tenant-rpc-service/cmd/main.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tenant-rpc-service/etc/config.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tenant-rpc-service/etc/rbac.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tenant-rpc-service/go.mod" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tenant-rpc-service/internal/config/config.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tenant-rpc-service/internal/dao/common.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tenant-rpc-service/internal/dao/dao.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tenant-rpc-service/internal/dao/dao.tenant.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tenant-rpc-service/internal/dao/dao.tenant.secret.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tenant-rpc-service/internal/logic/addtenantlogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tenant-rpc-service/internal/logic/deletetenantlogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tenant-rpc-service/internal/logic/edittenantlogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tenant-rpc-service/internal/logic/pwdtenantlogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tenant-rpc-service/internal/logic/tenantinfologic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tenant-rpc-service/internal/logic/tenantlistlogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tenant-rpc-service/internal/logic/tenantloginlogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tenant-rpc-service/internal/model/company.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tenant-rpc-service/internal/model/sys_role.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tenant-rpc-service/internal/model/sys_role_permission.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tenant-rpc-service/internal/model/tenant.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tenant-rpc-service/internal/model/tenant_permission.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tenant-rpc-service/internal/model/tenant_secret.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tenant-rpc-service/internal/model/verify_record.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tenant-rpc-service/internal/server/tenantrpcserviceserver.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tenant-rpc-service/internal/svc/servicecontext.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tenant-rpc-service/internal/types/cache_key.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tenant-rpc-service/internal/types/identity.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tenant-rpc-service/internal/types/rbac.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tenant-rpc-service/pb/tenant/tenant.pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tenant-rpc-service/pb/tenant/tenant_grpc.pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tenant-rpc-service/tenant.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tenant-rpc-service/tenant/tenant.pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tenant-rpc-service/tenantrpcservice/tenantrpcservice.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tenant-rpc-service/version" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../version" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wechat-rpc-service/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wechat-rpc-service/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wechat-rpc-service/CONTRIBUTORS.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wechat-rpc-service/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wechat-rpc-service/cmd/main.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wechat-rpc-service/etc/config.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wechat-rpc-service/etc/rbac.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wechat-rpc-service/go.mod" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wechat-rpc-service/internal/config/config.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wechat-rpc-service/internal/dao/common.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wechat-rpc-service/internal/dao/dao.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wechat-rpc-service/internal/logic/code2tokenlogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wechat-rpc-service/internal/logic/officialaccountaccesstokenlogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wechat-rpc-service/internal/logic/refreshusertokenlogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wechat-rpc-service/internal/logic/usertoken2userinfologic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wechat-rpc-service/internal/logic/webautoredirectwechatlogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wechat-rpc-service/internal/logic/webredirectwechatlogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wechat-rpc-service/internal/model/WechatConfig.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wechat-rpc-service/internal/server/wechatrpcserviceserver.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wechat-rpc-service/internal/svc/servicecontext.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wechat-rpc-service/internal/types/wechat.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wechat-rpc-service/pb/wechat/wechat.pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wechat-rpc-service/pb/wechat/wechat_grpc.pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wechat-rpc-service/version" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wechat-rpc-service/wechat.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wechat-rpc-service/wechatrpcservice/wechatrpcservice.go" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,7 +462,7 @@
   </component>
   <component name="GOROOT" url="file://D:/Program Files/Go" />
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
@@ -37,7 +480,7 @@
     "RunOnceActivity.go.migrated.go.modules.settings": "true",
     "RunOnceActivity.go.modules.automatic.dependencies.download": "true",
     "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
-    "git-widget-placeholder": "develop",
+    "git-widget-placeholder": "master",
     "go.import.settings.migrated": "true",
     "go.sdk.automatically.set": "true",
     "last_opened_file_path": "E:/project/src/trident",
@@ -57,11 +500,11 @@
       <recent name="E:\project\src\openui-backend-go\service\user\model" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\project\src\openui-backend-go\common" />
       <recent name="E:\project\src\openui-backend-go\common\jwt" />
       <recent name="E:\project\src\openui-backend-go\common\const" />
       <recent name="E:\project\src\openui-backend-go\api" />
       <recent name="E:\project\src\openui-backend-go\rpc" />
-      <recent name="E:\project\src\openui-backend-go\rpc\etc" />
     </key>
   </component>
   <component name="SharedIndexes">

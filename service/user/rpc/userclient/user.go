@@ -6,7 +6,7 @@ package userclient
 import (
 	"context"
 
-	"openui-backend-go/service/user/rpc/user"
+	"github.com/openui-backend-go/user-rpc/user"
 
 	"github.com/zeromicro/go-zero/zrpc"
 	"google.golang.org/grpc"

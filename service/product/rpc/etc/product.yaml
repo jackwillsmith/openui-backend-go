@@ -1,0 +1,31 @@
+Name: product.rpc
+ListenOn: 0.0.0.0:9001
+Etcd:
+  Hosts:
+  - 192.168.152.129:2389
+  Key: product.rpc
+
+Mysql:
+    Host: 192.168.152.129
+    Port: 3306
+    DbName: openui
+    User: root
+    Password: "123456"
+    DBZone: "TS"
+    Charset: utf8mb4
+    MaxIdle: 10
+    MaxOpen: 100
+    LogMode: true
+    Loc: Asia/Shanghai
+    Debug: true
+    TablePrefix: "v1_"
+    MaxLifetime: 300
+
+CacheRedis:
+    Name: "openui"
+    Nettype: "tcp"
+    Address: "192.168.152.129:6379"
+    Auth: ""
+    DB: 0
+
+Salt: HWVOFkGgLKAIOSCwd7qnJaZR9KQ2i8xe

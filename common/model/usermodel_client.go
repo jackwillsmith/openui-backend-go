@@ -8,7 +8,7 @@ import (
     "strings"
 	"time"
 
-    "openui-backend-go/common/database"
+    "github.com/openui-backend-go/common/database"
 
 	"github.com/zeromicro/go-zero/core/stores/builder"
 	"github.com/zeromicro/go-zero/core/stringx"
@@ -55,7 +55,7 @@ func newUserModel(conn *database.GormDao, c *database.DcRedisClient) *defaultUse
 	return &defaultUserModel{
 		db:   conn,
         cache: c,
-		table:      "user",
+		table: "user",
 	}
 }
 

@@ -2,11 +2,12 @@ package logic
 
 import (
 	"context"
+
+	"github.com/openui-backend-go/common/consts"
+	"github.com/openui-backend-go/common/cryptx"
+	"github.com/openui-backend-go/user-rpc/internal/svc"
+	"github.com/openui-backend-go/user-rpc/user"
 	"google.golang.org/grpc/status"
-	"openui-backend-go/common/consts"
-	"openui-backend-go/common/cryptx"
-	"openui-backend-go/service/user/rpc/internal/svc"
-	"openui-backend-go/service/user/rpc/user"
 
 	"github.com/zeromicro/go-zero/core/logx"
 )

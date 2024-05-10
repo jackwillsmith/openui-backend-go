@@ -4,10 +4,10 @@ import (
 	"flag"
 	"fmt"
 
-	"github.com/openui-backend-go/user-rpc/internal/config"
-	userserver "github.com/openui-backend-go/user-rpc/internal/server"
-	"github.com/openui-backend-go/user-rpc/internal/svc"
-	"github.com/openui-backend-go/user-rpc/user"
+	"github.com/openui-backend-go/product-rpc/internal/config"
+	productsvr "github.com/openui-backend-go/product-rpc/internal/server"
+	"github.com/openui-backend-go/product-rpc/internal/svc"
+	"github.com/openui-backend-go/product-rpc/types/product"
 
 	"github.com/zeromicro/go-zero/core/conf"
 	"github.com/zeromicro/go-zero/core/service"
@@ -16,7 +16,7 @@ import (
 	"google.golang.org/grpc/reflection"
 )
 
-var configFile = flag.String("f", "etc/user.yaml", "the config file")
+var configFile = flag.String("f", "etc/product.yaml", "the config file")
 
 func main() {
 	flag.Parse()
@@ -26,7 +26,7 @@ func main() {
 	ctx := svc.NewServiceContext(c)
 
 	s := zrpc.MustNewServer(c.RpcServerConf, func(grpcServer *grpc.Server) {
-		user.RegisterUserServer(grpcServer, userserver.NewUserServer(ctx))
+		product.RegisterProductServer(grpcServer, productsvr.NewProductServer(ctx))
 
 		if c.Mode == service.DevMode || c.Mode == service.TestMode {
 			reflection.Register(grpcServer)
