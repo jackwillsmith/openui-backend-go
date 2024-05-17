@@ -2,32 +2,31 @@
 package types
 
 type LoginRequest struct {
-	Mobile   string `json:"mobile"`
+	Email    string `json:"email"`
 	Password string `json:"password"`
 }
 
 type LoginResponse struct {
-	AccessToken  string `json:"accessToken"`
-	AccessExpire int64  `json:"accessExpire"`
+	Id    int64  `json:"id"`
+	Name  string `json:"name"`
+	Token string `json:"token"`
 }
 
 type RegisterRequest struct {
-	Name     string `json:"name"`
-	Gender   int64  `json:"gender"`
-	Mobile   string `json:"mobile"`
-	Password string `json:"password"`
+	Name            string `json:"name"`
+	Email           string `json:"email"`
+	Password        string `json:"password"`
+	ProfileImageUrl string `json:"profile_image_url"`
 }
 
 type RegisterResponse struct {
-	Id     int64  `json:"id"`
-	Name   string `json:"name"`
-	Gender int64  `json:"gender"`
-	Mobile string `json:"mobile"`
+	Id    int64  `json:"id"`
+	Name  string `json:"name"`
+	Token string `json:"token"`
 }
 
 type UserInfoResponse struct {
-	Id     int64  `json:"id"`
-	Name   string `json:"name"`
-	Gender int64  `json:"gender"`
-	Mobile string `json:"mobile"`
+	Id    int64  `json:"id"`
+	Name  string `json:"name"`
+	Email string `json:"email"`
 }

@@ -3,9 +3,9 @@ package handler
 import (
 	"net/http"
 
+	"github.com/openui-backend-go/service/user-api/internal/logic"
+	"github.com/openui-backend-go/service/user-api/internal/svc"
 	"github.com/zeromicro/go-zero/rest/httpx"
-	"openui-backend-go/service/user/api/internal/logic"
-	"openui-backend-go/service/user/api/internal/svc"
 )
 
 func UserInfoHandler(svcCtx *svc.ServiceContext) http.HandlerFunc {

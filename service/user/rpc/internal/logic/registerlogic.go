@@ -9,8 +9,8 @@ import (
 	"github.com/openui-backend-go/common/model"
 	"google.golang.org/grpc/status"
 
-	"github.com/openui-backend-go/user-rpc/internal/svc"
-	"github.com/openui-backend-go/user-rpc/user"
+	"github.com/openui-backend-go/service/user-rpc/internal/svc"
+	"github.com/openui-backend-go/service/user-rpc/user"
 
 	"github.com/zeromicro/go-zero/core/logx"
 )
@@ -31,7 +31,7 @@ func NewRegisterLogic(ctx context.Context, svcCtx *svc.ServiceContext) *Register
 
 func (l *RegisterLogic) Register(in *user.RegisterRequest) (*user.RegisterResponse, error) {
 	// 判断手机号是否已经注册
-	_, err := l.svcCtx.UserModel.FindOneByMobile(l.ctx, in.Mobile)
+	_, err := l.svcCtx.UserModel.FindOneByEmail(l.ctx, in.Email)
 	if err == nil {
 		return nil, status.Error(consts.ACCOUNT_ALREADY_EXISTS, consts.WrongMessageEn[consts.ACCOUNT_ALREADY_EXISTS])
 	}
@@ -39,8 +39,7 @@ func (l *RegisterLogic) Register(in *user.RegisterRequest) (*user.RegisterRespon
 	if err == consts.ERROR_NOT_FOUND {
 		newUser := model.User{
 			Name:       in.Name,
-			Gender:     in.Gender,
-			Mobile:     in.Mobile,
+			Email:      in.Email,
 			Password:   cryptx.PasswordEncrypt(l.svcCtx.Config.Salt, in.Password),
 			CreateTime: time.Now(),
 			UpdateTime: time.Now(),
@@ -52,10 +51,8 @@ func (l *RegisterLogic) Register(in *user.RegisterRequest) (*user.RegisterRespon
 		}
 
 		return &user.RegisterResponse{
-			Id:     newUser.Id,
-			Name:   newUser.Name,
-			Gender: newUser.Gender,
-			Mobile: newUser.Mobile,
+			Id:   newUser.Id,
+			Name: newUser.Name,
 		}, nil
 
 	}

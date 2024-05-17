@@ -5,8 +5,8 @@ import (
 
 	"github.com/openui-backend-go/common/consts"
 	"github.com/openui-backend-go/common/cryptx"
-	"github.com/openui-backend-go/user-rpc/internal/svc"
-	"github.com/openui-backend-go/user-rpc/user"
+	"github.com/openui-backend-go/service/user-rpc/internal/svc"
+	"github.com/openui-backend-go/service/user-rpc/user"
 	"google.golang.org/grpc/status"
 
 	"github.com/zeromicro/go-zero/core/logx"
@@ -28,7 +28,7 @@ func NewLoginLogic(ctx context.Context, svcCtx *svc.ServiceContext) *LoginLogic 
 
 func (l *LoginLogic) Login(in *user.LoginRequest) (*user.LoginResponse, error) {
 	// 查询用户是否存在
-	res, err := l.svcCtx.UserModel.FindOneByMobile(l.ctx, in.Mobile)
+	res, err := l.svcCtx.UserModel.FindOneByEmail(l.ctx, in.Email)
 	if err != nil {
 		if err == consts.ERROR_NOT_FOUND {
 			return nil, status.Error(consts.ACCESS_NOT_FOUND, consts.WrongMessageEn[consts.ACCESS_NOT_FOUND])
@@ -43,9 +43,7 @@ func (l *LoginLogic) Login(in *user.LoginRequest) (*user.LoginResponse, error) {
 	}
 
 	return &user.LoginResponse{
-		Id:     res.Id,
-		Name:   res.Name,
-		Gender: res.Gender,
-		Mobile: res.Mobile,
+		Id:   res.Id,
+		Name: res.Name,
 	}, nil
 }

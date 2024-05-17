@@ -2,10 +2,12 @@ package logic
 
 import (
 	"context"
-	"openui-backend-go/service/user/rpc/userclient"
+	"time"
 
-	"openui-backend-go/service/user/api/internal/svc"
-	"openui-backend-go/service/user/api/internal/types"
+	"github.com/openui-backend-go/common/jwtx"
+	"github.com/openui-backend-go/service/user-api/internal/svc"
+	"github.com/openui-backend-go/service/user-api/internal/types"
+	"github.com/openui-backend-go/service/user-rpc/userclient"
 
 	"github.com/zeromicro/go-zero/core/logx"
 )
@@ -27,18 +29,24 @@ func NewRegisterLogic(ctx context.Context, svcCtx *svc.ServiceContext) *Register
 func (l *RegisterLogic) Register(req *types.RegisterRequest) (resp *types.RegisterResponse, err error) {
 	res, err := l.svcCtx.UserRpc.Register(l.ctx, &userclient.RegisterRequest{
 		Name:     req.Name,
-		Gender:   req.Gender,
-		Mobile:   req.Mobile,
+		Email:    req.Email,
 		Password: req.Password,
 	})
 	if err != nil {
 		return nil, err
 	}
 
+	now := time.Now().Unix()
+	accessExpire := l.svcCtx.Config.Auth.AccessExpire
+
+	accessToken, err := jwtx.GetToken(l.svcCtx.Config.Auth.AccessSecret, now, accessExpire, res.Id)
+	if err != nil {
+		return nil, err
+	}
+
 	return &types.RegisterResponse{
-		Id:     res.Id,
-		Name:   res.Name,
-		Gender: res.Gender,
-		Mobile: res.Mobile,
+		Id:    res.Id,
+		Name:  res.Name,
+		Token: accessToken,
 	}, nil
 }

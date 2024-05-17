@@ -4,8 +4,8 @@ import (
 	"context"
 
 	"github.com/openui-backend-go/common/consts"
-	"github.com/openui-backend-go/user-rpc/internal/svc"
-	"github.com/openui-backend-go/user-rpc/user"
+	"github.com/openui-backend-go/service/user-rpc/internal/svc"
+	"github.com/openui-backend-go/service/user-rpc/user"
 	"google.golang.org/grpc/status"
 
 	"github.com/zeromicro/go-zero/core/logx"
@@ -36,9 +36,8 @@ func (l *UserInfoLogic) UserInfo(in *user.UserInfoRequest) (*user.UserInfoRespon
 	}
 
 	return &user.UserInfoResponse{
-		Id:     res.Id,
-		Name:   res.Name,
-		Gender: res.Gender,
-		Mobile: res.Mobile,
+		Id:    res.Id,
+		Name:  res.Name,
+		Email: res.Email,
 	}, nil
 }

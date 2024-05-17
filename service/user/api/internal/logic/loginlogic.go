@@ -2,12 +2,13 @@ package logic
 
 import (
 	"context"
-	"openui-backend-go/common/jwtx"
-	"openui-backend-go/service/user/rpc/userclient"
 	"time"
 
-	"openui-backend-go/service/user/api/internal/svc"
-	"openui-backend-go/service/user/api/internal/types"
+	"github.com/openui-backend-go/common/jwtx"
+	"github.com/openui-backend-go/service/user-rpc/userclient"
+
+	"github.com/openui-backend-go/service/user-api/internal/svc"
+	"github.com/openui-backend-go/service/user-api/internal/types"
 
 	"github.com/zeromicro/go-zero/core/logx"
 )
@@ -28,7 +29,7 @@ func NewLoginLogic(ctx context.Context, svcCtx *svc.ServiceContext) *LoginLogic 
 
 func (l *LoginLogic) Login(req *types.LoginRequest) (resp *types.LoginResponse, err error) {
 	res, err := l.svcCtx.UserRpc.Login(l.ctx, &userclient.LoginRequest{
-		Mobile:   req.Mobile,
+		Email:    req.Email,
 		Password: req.Password,
 	})
 	if err != nil {
@@ -44,7 +45,8 @@ func (l *LoginLogic) Login(req *types.LoginRequest) (resp *types.LoginResponse, 
 	}
 
 	return &types.LoginResponse{
-		AccessToken:  accessToken,
-		AccessExpire: now + accessExpire,
+		Id:    res.Id,
+		Name:  res.Name,
+		Token: accessToken,
 	}, nil
 }

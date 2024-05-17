@@ -3,7 +3,7 @@ package svc
 import (
 	"github.com/openui-backend-go/common/database"
 	"github.com/openui-backend-go/common/model"
-	"github.com/openui-backend-go/user-rpc/internal/config"
+	"github.com/openui-backend-go/service/user-rpc/internal/config"
 )
 
 type ServiceContext struct {

@@ -4,10 +4,10 @@ import (
 	"flag"
 	"fmt"
 
-	"github.com/openui-backend-go/user-rpc/internal/config"
-	userserver "github.com/openui-backend-go/user-rpc/internal/server"
-	"github.com/openui-backend-go/user-rpc/internal/svc"
-	"github.com/openui-backend-go/user-rpc/user"
+	"github.com/openui-backend-go/service/user-rpc/internal/config"
+	userserver "github.com/openui-backend-go/service/user-rpc/internal/server"
+	"github.com/openui-backend-go/service/user-rpc/internal/svc"
+	"github.com/openui-backend-go/service/user-rpc/user"
 
 	"github.com/zeromicro/go-zero/core/conf"
 	"github.com/zeromicro/go-zero/core/service"

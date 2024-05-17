@@ -21,14 +21,14 @@ var (
 	userRowsWithPlaceHolder = strings.Join(stringx.Remove(userFieldNames, "`id`", "`create_at`", "`create_time`", "`created_at`", "`update_at`", "`update_time`", "`updated_at`"), "=?,") + "=?"
 
 	cacheUserIdPrefix     = "cache:user:id:"
-	cacheUserMobilePrefix = "cache:user:mobile:"
+	cacheUserEmailPrefix = "cache:user:email:"
 )
 
 type (
 	userModel interface {
 		Insert(ctx context.Context, data *User) error
 		FindOne(ctx context.Context, id int64) (*User, error)
-		FindOneByMobile(ctx context.Context, mobile string) (*User, error)
+		FindOneByEmail(ctx context.Context, email string) (*User, error)
 		Update(ctx context.Context, data *User) error
 		Delete(ctx context.Context, id int64) error
 	}
@@ -42,8 +42,7 @@ type (
 	User struct {
 		Id         int64     `db:"id"`
 		Name       string    `db:"name"`     // 用户姓名
-		Gender     int64     `db:"gender"`   // 用户性别
-		Mobile     string    `db:"mobile"`   // 用户电话
+		Email string `db:"email"`
 		Password   string    `db:"password"` // 用户密码
 		CreateTime time.Time `db:"create_time"`
 		UpdateTime time.Time `db:"update_time"`
@@ -78,10 +77,10 @@ func (m *defaultUserModel) FindOne(ctx context.Context, id int64) (*User, error)
 	return &user, nil
 }
 
-func (m *defaultUserModel) FindOneByMobile(ctx context.Context, mobile string) (*User, error) {
+func (m *defaultUserModel) FindOneByEmail(ctx context.Context, email string) (*User, error) {
     user := User{}
-    sql := "mobile = ?"
-    err := m.db.First(ctx, m.table, &user, sql, mobile)
+    sql := "email = ?"
+    err := m.db.First(ctx, m.table, &user, sql, email)
     if err != nil {
         return nil, err
     }

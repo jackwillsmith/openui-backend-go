@@ -4,9 +4,9 @@ import (
 	"flag"
 	"fmt"
 
-	"openui-backend-go/service/user/api/internal/config"
-	"openui-backend-go/service/user/api/internal/handler"
-	"openui-backend-go/service/user/api/internal/svc"
+	"github.com/openui-backend-go/service/user-api/internal/config"
+	"github.com/openui-backend-go/service/user-api/internal/handler"
+	"github.com/openui-backend-go/service/user-api/internal/svc"
 
 	"github.com/zeromicro/go-zero/core/conf"
 	"github.com/zeromicro/go-zero/rest"
