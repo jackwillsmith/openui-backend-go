@@ -29,22 +29,45 @@ type (
 		Name  string `json:"name"`
 		Email string `json:"email"`
 	}
-// 用户信息
+	// 用户信息
+	ConfigResponse {
+		Status                   bool                       `json:"status"`
+		Name                     string                     `json:"name"`
+		Version                  string                     `json:"version"`
+		DefaultLocale            string                     `json:"default_locale"`
+		Images                   bool                       `json:"images"`
+		DefaultModels            interface{}                `json:"default_models"`
+		DefaultPromptSuggestions []DefaultPromptSuggestions `json:"default_prompt_suggestions"`
+		TrustedHeaderAuth        bool                       `json:"trusted_header_auth"`
+	}
+	DefaultPromptSuggestions {
+		Title   []string `json:"title"`
+		Content string   `json:"content"`
+	}
 )
 
 service User {
-	@handler Login
-	post /api/user/login (LoginRequest) returns (LoginResponse)
-
-	@handler Register
-	post /api/user/register (RegisterRequest) returns (RegisterResponse)
+	@handler Config
+	get /api/config returns (ConfigResponse)
 }
 
 @server (
-	jwt: Auth
+	prefix: /api/v1
+)
+service User {
+	@handler Login
+	post /auths/signin (LoginRequest) returns (LoginResponse)
+
+	@handler Register
+	post /auths/signup (RegisterRequest) returns (RegisterResponse)
+}
+
+@server (
+	jwt:    Auth
+	prefix: /api/v1
 )
 service User {
 	@handler UserInfo
-	get /api/user/userinfo returns (UserInfoResponse)
+	get /auths returns (UserInfoResponse)
 }
 

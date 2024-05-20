@@ -30,3 +30,15 @@ CacheRedis:
     DB: 0
 
 Salt: HWVOFkGgLKAIOSCwd7qnJaZR9KQ2i8xe
+
+#日志配置
+LogConf:
+    ServiceName: user.rpc
+    Mode: file
+    TimeFormat: 2006-01-02 15:04:05.000
+    Path: logs
+    Level: info
+    Compress: true
+    Stat: false # 不记录CPU、内存等信息
+    KeepDays: 10
+    MaxBackups: 2

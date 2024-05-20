@@ -2,6 +2,7 @@ package logic
 
 import (
 	"context"
+	"github.com/zeromicro/go-zero/core/logc"
 	"time"
 
 	"github.com/openui-backend-go/common/jwtx"
@@ -33,6 +34,7 @@ func (l *LoginLogic) Login(req *types.LoginRequest) (resp *types.LoginResponse, 
 		Password: req.Password,
 	})
 	if err != nil {
+		logc.Error(l.ctx, "user login failed", err)
 		return nil, err
 	}
 
@@ -41,6 +43,7 @@ func (l *LoginLogic) Login(req *types.LoginRequest) (resp *types.LoginResponse, 
 
 	accessToken, err := jwtx.GetToken(l.svcCtx.Config.Auth.AccessSecret, now, accessExpire, res.Id)
 	if err != nil {
+		logc.Error(l.ctx, "get access token failed", err)
 		return nil, err
 	}
 

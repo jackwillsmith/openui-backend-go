@@ -1,6 +1,6 @@
 Name: User
 Host: 0.0.0.0
-Port: 8888
+Port: 8080
 
 Mysql:
     Host: 192.168.152.129
@@ -28,6 +28,18 @@ CacheRedis:
 Auth:
     AccessSecret: uOvKLmISJKyuOpNYd4Z0I1SiT7MweJhl
     AccessExpire: 86400
+
+#日志配置
+LogConf:
+    ServiceName: user.api
+    Mode: file
+    TimeFormat: 2006-01-02 15:04:05.000
+    Path: logs
+    Level: info
+    Compress: true
+    Stat: false # 不记录CPU、内存等信息
+    KeepDays: 10
+    MaxBackups: 2
 
 UserRpc:
     Etcd:
