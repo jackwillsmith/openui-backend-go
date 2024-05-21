@@ -5,21 +5,56 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2cbffd38-95a8-4346-ac5a-d47e5b5f3fa7" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/common/consts/config.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/middleware/cors.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/user/api/readMe.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/chat/api/chat.api" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/chat/rpc/chat.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/chat/rpc/chat.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/chat/rpc/go.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/chat/rpc/go.sum" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/chat/rpc/internal/config/config.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/chat/rpc/internal/logic/calllogic.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/chat/rpc/internal/logic/createlogic.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/chat/rpc/internal/logic/detaillogic.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/chat/rpc/internal/logic/removelogic.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/chat/rpc/internal/logic/updatelogic.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/chat/rpc/internal/svc/servicecontext.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/model/product.sql" beforeDir="false" afterPath="$PROJECT_DIR$/common/model/chat.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/model/productmodel.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/model/productmodel_client.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/model/usermodel_client.go" beforeDir="false" afterPath="$PROJECT_DIR$/common/model/usermodel_client.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/product/api/etc/product.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/product/api/internal/config/config.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/product/api/internal/handler/createhandler.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/product/api/internal/handler/detailhandler.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/product/api/internal/handler/removehandler.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/product/api/internal/handler/routes.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/product/api/internal/handler/updatehandler.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/product/api/internal/logic/createlogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/product/api/internal/logic/detaillogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/product/api/internal/logic/removelogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/product/api/internal/logic/updatelogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/product/api/internal/svc/servicecontext.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/product/api/internal/types/types.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/product/api/product.api" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/product/api/product.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/product/rpc/etc/product.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/product/rpc/go.mod" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/product/rpc/go.sum" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/product/rpc/internal/config/config.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/product/rpc/internal/logic/calllogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/product/rpc/internal/logic/createlogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/product/rpc/internal/logic/detaillogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/product/rpc/internal/logic/removelogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/product/rpc/internal/logic/updatelogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/product/rpc/internal/server/productserver.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/product/rpc/internal/svc/servicecontext.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/product/rpc/product.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/product/rpc/product.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/product/rpc/productclient/product.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/product/rpc/types/product/product.pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/product/rpc/types/product/product_grpc.pb.go" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/service/user/api/etc/user.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/service/user/api/etc/user.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/user/api/internal/config/config.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/user/api/internal/config/config.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/user/api/internal/handler/routes.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/user/api/internal/handler/routes.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/user/api/internal/logic/loginlogic.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/user/api/internal/logic/loginlogic.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/user/api/internal/types/types.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/user/api/internal/types/types.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/user/api/user.api" beforeDir="false" afterPath="$PROJECT_DIR$/service/user/api/user.api" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/user/api/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/user/api/user.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/user/rpc/etc/user.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/service/user/rpc/etc/user.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/user/rpc/internal/config/config.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/user/rpc/internal/config/config.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/user/rpc/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/user/rpc/user.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,11 +109,11 @@
       <recent name="E:\project\src\openui-backend-go\service\user\model" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\project\src\openui-backend-go\service\chat\rpc" />
       <recent name="E:\project\src\openui-backend-go\common" />
       <recent name="E:\project\src\openui-backend-go\common\jwt" />
       <recent name="E:\project\src\openui-backend-go\common\const" />
       <recent name="E:\project\src\openui-backend-go\api" />
-      <recent name="E:\project\src\openui-backend-go\rpc" />
     </key>
   </component>
   <component name="SharedIndexes">

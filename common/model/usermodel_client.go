@@ -4,7 +4,6 @@ package model
 
 import (
 	"context"
-	"fmt"
     "strings"
 	"time"
 
@@ -101,10 +100,6 @@ func (m *defaultUserModel) Update(ctx context.Context, newData *User) error {
         return err
     }
 	return nil
-}
-
-func (m *defaultUserModel) formatPrimary(primary any) string {
-	return fmt.Sprintf("%s%v", cacheUserIdPrefix, primary)
 }
 
 func (m *defaultUserModel) tableName() string {

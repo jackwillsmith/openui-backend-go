@@ -1,0 +1,80 @@
+syntax = "proto3";
+
+package chat;
+
+option go_package = "./chat";
+
+message Empty {
+}
+// 产品创建
+message CreateRequest {
+    string UserId = 1;
+    string Title = 2;
+    string Chat = 3;
+    string ShareId = 4;
+    int64 Archived = 5;
+}
+message CreateResponse {
+    int64 Id = 1;
+}
+// 产品创建
+
+// 产品修改
+message UpdateRequest {
+    int64 Id = 1;
+    string UserId = 2;
+    string Title = 3;
+    string Chat = 4;
+    string ShareId = 5;
+    int64 Archived = 6;
+}
+message UpdateResponse {
+}
+// 产品修改
+
+// 产品删除
+message RemoveRequest {
+    int64 Id = 1;
+}
+message RemoveResponse {
+}
+// 产品删除
+
+// 产品详情
+message DetailRequest {
+    int64 Id = 1;
+}
+message DetailResponse {
+    int64 Id = 1;
+    string UserId = 2;
+    string Title = 3;
+    string Chat = 4;
+    string ShareId = 5;
+    int64 Archived = 6;
+}
+// 产品详情
+
+message ListChats {
+    repeated DetailResponse List = 1;
+}
+
+// 调用ollama 大模型
+message CallRequest {
+    string Name = 1;
+    string Prompt = 2;
+    string Role = 3;
+}
+
+message CallResponse {
+    string Text = 1;
+}
+
+service Chat {
+    rpc Create(CreateRequest) returns(CreateResponse);
+    rpc Update(UpdateRequest) returns(UpdateResponse);
+    rpc Remove(RemoveRequest) returns(RemoveResponse);
+    rpc Detail(DetailRequest) returns(DetailResponse);
+    rpc ListChat(Empty) returns(ListChats);
+
+    rpc Call(CallRequest) returns(CallResponse);
+}
