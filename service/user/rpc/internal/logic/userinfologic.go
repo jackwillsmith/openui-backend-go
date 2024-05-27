@@ -36,8 +36,10 @@ func (l *UserInfoLogic) UserInfo(in *user.UserInfoRequest) (*user.UserInfoRespon
 	}
 
 	return &user.UserInfoResponse{
-		Id:    res.Id,
-		Name:  res.Name,
-		Email: res.Email,
+		Id:              res.Id,
+		Name:            res.Name,
+		Email:           res.Email,
+		Role:            res.Role,
+		ProfileImageUrl: res.Profile_image_url,
 	}, nil
 }

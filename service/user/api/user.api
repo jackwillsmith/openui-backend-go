@@ -5,9 +5,11 @@ type (
 		Password string `json:"password"`
 	}
 	LoginResponse {
-		Id    int64  `json:"id"`
-		Name  string `json:"name"`
-		Token string `json:"token"`
+		Id              int64  `json:"id"`
+		Name            string `json:"name"`
+		Role            string `json:"role"`
+		ProfileImageUrl string `json:"profile_image_url"`
+		Token           string `json:"token"`
 	}
 	// 用户登录
 	// 用户注册
@@ -25,31 +27,14 @@ type (
 	// 用户注册
 	// 用户信息
 	UserInfoResponse {
-		Id    int64  `json:"id"`
-		Name  string `json:"name"`
-		Email string `json:"email"`
+		Id              int64  `json:"id"`
+		Name            string `json:"name"`
+		Email           string `json:"email"`
+		Role            string `json:"role"`
+		ProfileImageUrl string `json:"profile_image_url"`
 	}
-	// 用户信息
-	ConfigResponse {
-		Status                   bool                       `json:"status"`
-		Name                     string                     `json:"name"`
-		Version                  string                     `json:"version"`
-		DefaultLocale            string                     `json:"default_locale"`
-		Images                   bool                       `json:"images"`
-		DefaultModels            interface{}                `json:"default_models"`
-		DefaultPromptSuggestions []DefaultPromptSuggestions `json:"default_prompt_suggestions"`
-		TrustedHeaderAuth        bool                       `json:"trusted_header_auth"`
-	}
-	DefaultPromptSuggestions {
-		Title   []string `json:"title"`
-		Content string   `json:"content"`
-	}
+// 用户信息
 )
-
-service User {
-	@handler Config
-	get /api/config returns (ConfigResponse)
-}
 
 @server (
 	prefix: /api/v1

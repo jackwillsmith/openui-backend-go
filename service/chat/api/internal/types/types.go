@@ -5,6 +5,28 @@ type ChangelogResponse struct {
 	Changelog string `json:"changelog"`
 }
 
+type Chat struct {
+	ID        string `json:"id"`
+	Title     string `json:"title"`
+	UpdatedAt int    `json:"updated_at"`
+	CreatedAt int    `json:"created_at"`
+}
+
+type ChatMessage struct {
+	Chats Chat `json:"chats"`
+}
+
+type ConfigResponse struct {
+	Status                   bool                       `json:"status"`
+	Name                     string                     `json:"name"`
+	Version                  string                     `json:"version"`
+	DefaultLocale            string                     `json:"default_locale"`
+	Images                   bool                       `json:"images"`
+	DefaultModels            interface{}                `json:"default_models"`
+	DefaultPromptSuggestions []DefaultPromptSuggestions `json:"default_prompt_suggestions"`
+	TrustedHeaderAuth        bool                       `json:"trusted_header_auth"`
+}
+
 type CreateRequest struct {
 	UserId   string `json:"userId"`
 	Title    string `json:"title"`
@@ -15,6 +37,15 @@ type CreateRequest struct {
 
 type CreateResponse struct {
 	Id int64 `json:"id"`
+}
+
+type DefaultModels struct {
+	Models string `json:"models"`
+}
+
+type DefaultPromptSuggestions struct {
+	Title   []string `json:"title"`
+	Content string   `json:"content"`
 }
 
 type DetailRequest struct {
@@ -30,11 +61,43 @@ type DetailResponse struct {
 	Archived int64  `json:"archived"`
 }
 
+type Details struct {
+	Format            string      `json:"format"`
+	Family            string      `json:"family"`
+	Families          interface{} `json:"families"`
+	ParameterSize     string      `json:"parameter_size"`
+	QuantizationLevel string      `json:"quantization_level"`
+}
+
 type ListRequest struct {
 }
 
 type ListResponse struct {
 	Data []DetailResponse `json:"data"`
+}
+
+type Model struct {
+	Name       string  `json:"name"`
+	ModifiedAt string  `json:"modified_at"`
+	Size       int64   `json:"size"`
+	Digest     string  `json:"digest"`
+	Details    Details `json:"details"`
+}
+
+type ModelReponse struct {
+	Models []Model `json:"models"`
+}
+
+type Prompt struct {
+	Id      int64  `json:"id"`
+	Command string `json:"command"`
+	UserId  string `json:"user_id"`
+	Title   string `json:"title"`
+	Content string `json:"content"`
+}
+
+type PromptResponse struct {
+	Prompts []Prompt `json:"prompts"`
 }
 
 type RemoveRequest struct {

@@ -24,7 +24,28 @@ func NewListChatLogic(ctx context.Context, svcCtx *svc.ServiceContext) *ListChat
 }
 
 func (l *ListChatLogic) ListChat(in *chat.Empty) (*chat.ListChats, error) {
-	// todo: add your logic here and delete this line
+	// 1. 调用 chat list方法
+	res, err := l.svcCtx.ChatModel.List(l.ctx)
+	if err != nil {
+		logx.Error("List error: %v", err)
+		return nil, err
+	}
+	// 2. 将返回的 chats封装成响应
+	var chats []*chat.DetailResponse
+	for _, v := range *res {
+		chat := &chat.DetailResponse{
+			Id:       v.Id,
+			UserId:   v.UserId,
+			Title:    v.Title,
+			Chat:     v.Chat,
+			ShareId:  v.ShareId,
+			Archived: v.Archived,
+		}
+		chats = append(chats, chat)
+	}
+	resp := &chat.ListChats{
+		List: chats,
+	}
 
-	return &chat.ListChats{}, nil
+	return resp, nil
 }

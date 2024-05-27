@@ -27,6 +27,7 @@ type (
 		FindOne(ctx context.Context, id int64) (*Chat, error)
 		Update(ctx context.Context, data *Chat) error
 		Delete(ctx context.Context, id int64) error
+        List(ctx context.Context) (*[]Chat, error)
 	}
 
 	defaultChatModel struct {
@@ -88,6 +89,15 @@ func (m *defaultChatModel) Update(ctx context.Context, data *Chat) error {
         return err
     }
     return nil
+}
+
+func (m *defaultChatModel) List(ctx context.Context) (*[]Chat, error) {
+    var chats []Chat
+    err := m.db.Find(ctx, m.table, &chats, "")
+    if err != nil {
+        return nil, err
+    }
+    return &chats, nil
 }
 
 func (m *defaultChatModel) tableName() string {

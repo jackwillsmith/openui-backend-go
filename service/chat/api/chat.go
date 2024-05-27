@@ -3,6 +3,9 @@ package main
 import (
 	"flag"
 	"fmt"
+	"github.com/openui-backend-go/common/middleware"
+	"github.com/openui-backend-go/common/utils"
+	"github.com/zeromicro/go-zero/core/logc"
 
 	"github.com/openui-backend-go/service/chat-api/internal/config"
 	"github.com/openui-backend-go/service/chat-api/internal/handler"
@@ -19,8 +22,13 @@ func main() {
 
 	var c config.Config
 	conf.MustLoad(*configFile, &c)
+	logc.MustSetup(c.LogConf)
+
+	utils.SetOllUrl(c.OllUrl)
 
 	server := rest.MustNewServer(c.RestConf, rest.WithCors("*"))
+	// 设置静态文件中间件
+	middleware.MiddelwareStatic(server)
 
 	defer server.Stop()
 

@@ -21,6 +21,8 @@ type (
 	DetailResponse = chat.DetailResponse
 	Empty          = chat.Empty
 	ListChats      = chat.ListChats
+	ListPrompts    = chat.ListPrompts
+	Prompt         = chat.Prompt
 	RemoveRequest  = chat.RemoveRequest
 	RemoveResponse = chat.RemoveResponse
 	UpdateRequest  = chat.UpdateRequest
@@ -32,6 +34,7 @@ type (
 		Remove(ctx context.Context, in *RemoveRequest, opts ...grpc.CallOption) (*RemoveResponse, error)
 		Detail(ctx context.Context, in *DetailRequest, opts ...grpc.CallOption) (*DetailResponse, error)
 		ListChat(ctx context.Context, in *Empty, opts ...grpc.CallOption) (*ListChats, error)
+		ListPrompt(ctx context.Context, in *Empty, opts ...grpc.CallOption) (*ListPrompts, error)
 		Call(ctx context.Context, in *CallRequest, opts ...grpc.CallOption) (*CallResponse, error)
 	}
 
@@ -69,6 +72,11 @@ func (m *defaultChat) Detail(ctx context.Context, in *DetailRequest, opts ...grp
 func (m *defaultChat) ListChat(ctx context.Context, in *Empty, opts ...grpc.CallOption) (*ListChats, error) {
 	client := chat.NewChatClient(m.cli.Conn())
 	return client.ListChat(ctx, in, opts...)
+}
+
+func (m *defaultChat) ListPrompt(ctx context.Context, in *Empty, opts ...grpc.CallOption) (*ListPrompts, error) {
+	client := chat.NewChatClient(m.cli.Conn())
+	return client.ListPrompt(ctx, in, opts...)
 }
 
 func (m *defaultChat) Call(ctx context.Context, in *CallRequest, opts ...grpc.CallOption) (*CallResponse, error) {

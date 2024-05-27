@@ -14,8 +14,8 @@ func RegisterHandlers(server *rest.Server, serverCtx *svc.ServiceContext) {
 		[]rest.Route{
 			{
 				Method:  http.MethodGet,
-				Path:    "/api/changelog",
-				Handler: ChangelogHandler(serverCtx),
+				Path:    "/ollama/api/tags",
+				Handler: OllTagsHandler(serverCtx),
 			},
 			{
 				Method:  http.MethodGet,
@@ -23,6 +23,37 @@ func RegisterHandlers(server *rest.Server, serverCtx *svc.ServiceContext) {
 				Handler: VersionHandler(serverCtx),
 			},
 		},
+	)
+
+	server.AddRoutes(
+		[]rest.Route{
+			{
+				Method:  http.MethodGet,
+				Path:    "/api/changelog",
+				Handler: ChangelogHandler(serverCtx),
+			},
+			{
+				Method:  http.MethodGet,
+				Path:    "/api/config",
+				Handler: ConfigHandler(serverCtx),
+			},
+		},
+	)
+
+	server.AddRoutes(
+		[]rest.Route{
+			{
+				Method:  http.MethodPost,
+				Path:    "/configs/default/models",
+				Handler: GetDefaultModelsHandler(serverCtx),
+			},
+			{
+				Method:  http.MethodGet,
+				Path:    "/prompts",
+				Handler: GetPromptHandler(serverCtx),
+			},
+		},
+		rest.WithPrefix("/api/v1"),
 	)
 
 	server.AddRoutes(

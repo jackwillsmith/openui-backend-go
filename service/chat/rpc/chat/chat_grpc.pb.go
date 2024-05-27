@@ -19,12 +19,13 @@ import (
 const _ = grpc.SupportPackageIsVersion7
 
 const (
-	Chat_Create_FullMethodName   = "/chat.Chat/Create"
-	Chat_Update_FullMethodName   = "/chat.Chat/Update"
-	Chat_Remove_FullMethodName   = "/chat.Chat/Remove"
-	Chat_Detail_FullMethodName   = "/chat.Chat/Detail"
-	Chat_ListChat_FullMethodName = "/chat.Chat/ListChat"
-	Chat_Call_FullMethodName     = "/chat.Chat/Call"
+	Chat_Create_FullMethodName     = "/chat.Chat/Create"
+	Chat_Update_FullMethodName     = "/chat.Chat/Update"
+	Chat_Remove_FullMethodName     = "/chat.Chat/Remove"
+	Chat_Detail_FullMethodName     = "/chat.Chat/Detail"
+	Chat_ListChat_FullMethodName   = "/chat.Chat/ListChat"
+	Chat_ListPrompt_FullMethodName = "/chat.Chat/ListPrompt"
+	Chat_Call_FullMethodName       = "/chat.Chat/Call"
 )
 
 // ChatClient is the client API for Chat service.
@@ -36,6 +37,7 @@ type ChatClient interface {
 	Remove(ctx context.Context, in *RemoveRequest, opts ...grpc.CallOption) (*RemoveResponse, error)
 	Detail(ctx context.Context, in *DetailRequest, opts ...grpc.CallOption) (*DetailResponse, error)
 	ListChat(ctx context.Context, in *Empty, opts ...grpc.CallOption) (*ListChats, error)
+	ListPrompt(ctx context.Context, in *Empty, opts ...grpc.CallOption) (*ListPrompts, error)
 	Call(ctx context.Context, in *CallRequest, opts ...grpc.CallOption) (*CallResponse, error)
 }
 
@@ -92,6 +94,15 @@ func (c *chatClient) ListChat(ctx context.Context, in *Empty, opts ...grpc.CallO
 	return out, nil
 }
 
+func (c *chatClient) ListPrompt(ctx context.Context, in *Empty, opts ...grpc.CallOption) (*ListPrompts, error) {
+	out := new(ListPrompts)
+	err := c.cc.Invoke(ctx, Chat_ListPrompt_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 func (c *chatClient) Call(ctx context.Context, in *CallRequest, opts ...grpc.CallOption) (*CallResponse, error) {
 	out := new(CallResponse)
 	err := c.cc.Invoke(ctx, Chat_Call_FullMethodName, in, out, opts...)
@@ -110,6 +121,7 @@ type ChatServer interface {
 	Remove(context.Context, *RemoveRequest) (*RemoveResponse, error)
 	Detail(context.Context, *DetailRequest) (*DetailResponse, error)
 	ListChat(context.Context, *Empty) (*ListChats, error)
+	ListPrompt(context.Context, *Empty) (*ListPrompts, error)
 	Call(context.Context, *CallRequest) (*CallResponse, error)
 	mustEmbedUnimplementedChatServer()
 }
@@ -132,6 +144,9 @@ func (UnimplementedChatServer) Detail(context.Context, *DetailRequest) (*DetailR
 }
 func (UnimplementedChatServer) ListChat(context.Context, *Empty) (*ListChats, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method ListChat not implemented")
+}
+func (UnimplementedChatServer) ListPrompt(context.Context, *Empty) (*ListPrompts, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method ListPrompt not implemented")
 }
 func (UnimplementedChatServer) Call(context.Context, *CallRequest) (*CallResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Call not implemented")
@@ -239,6 +254,24 @@ func _Chat_ListChat_Handler(srv interface{}, ctx context.Context, dec func(inter
 	return interceptor(ctx, in, info, handler)
 }
 
+func _Chat_ListPrompt_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(Empty)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(ChatServer).ListPrompt(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: Chat_ListPrompt_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(ChatServer).ListPrompt(ctx, req.(*Empty))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 func _Chat_Call_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(CallRequest)
 	if err := dec(in); err != nil {
@@ -283,6 +316,10 @@ var Chat_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "ListChat",
 			Handler:    _Chat_ListChat_Handler,
+		},
+		{
+			MethodName: "ListPrompt",
+			Handler:    _Chat_ListPrompt_Handler,
 		},
 		{
 			MethodName: "Call",

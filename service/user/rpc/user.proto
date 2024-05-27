@@ -13,6 +13,8 @@ message LoginResponse {
     int64 Id = 1;
     string Name = 2;
     string Token = 3;
+    string Role = 4;
+    string ProfileImageUrl = 5;
 }
 // 用户登录
 
@@ -38,6 +40,8 @@ message UserInfoResponse {
     int64 Id = 1;
     string Name = 2;
     string Email = 3;
+    string Role = 4;
+    string ProfileImageUrl = 5;
 }
 // 用户信息
 

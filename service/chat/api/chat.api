@@ -52,14 +52,86 @@ type (
 	ChangelogResponse {
 		Changelog string `json:"changelog"`
 	}
+	ConfigResponse {
+		Status                   bool                       `json:"status"`
+		Name                     string                     `json:"name"`
+		Version                  string                     `json:"version"`
+		DefaultLocale            string                     `json:"default_locale"`
+		Images                   bool                       `json:"images"`
+		DefaultModels            interface{}                `json:"default_models"`
+		DefaultPromptSuggestions []DefaultPromptSuggestions `json:"default_prompt_suggestions"`
+		TrustedHeaderAuth        bool                       `json:"trusted_header_auth"`
+	}
+	DefaultPromptSuggestions {
+		Title   []string `json:"title"`
+		Content string   `json:"content"`
+	}
+	ModelReponse {
+		Models []Model `json:"models"`
+	}
+	Model {
+		Name       string  `json:"name"`
+		ModifiedAt string  `json:"modified_at"`
+		Size       int64   `json:"size"`
+		Digest     string  `json:"digest"`
+		Details    Details `json:"details"`
+	}
+	Details {
+		Format            string      `json:"format"`
+		Family            string      `json:"family"`
+		Families          interface{} `json:"families"`
+		ParameterSize     string      `json:"parameter_size"`
+		QuantizationLevel string      `json:"quantization_level"`
+	}
+	Prompt {
+		Id      int64  `json:"id"`
+		Command string `json:"command"`
+		UserId  string `json:"user_id"`
+		Title   string `json:"title"`
+		Content string `json:"content"`
+	}
+	PromptResponse {
+		Prompts []Prompt `json:"prompts"`
+	}
+	DefaultModels {
+		Models string `json:"models"`
+	}
+	Chat {
+		ID        string `json:"id"`
+		Title     string `json:"title"`
+		UpdatedAt int    `json:"updated_at"`
+		CreatedAt int    `json:"created_at"`
+	}
+	ChatMessage {
+		Chats Chat `json:"chats"`
+	}
 )
 
 service Chat {
 	@handler Version
 	get /ollama/api/version returns (VersionResponse)
 
+	@handler OllTags
+	get /ollama/api/tags returns (ModelReponse)
+}
+
+service Chat {
 	@handler Changelog
 	get /api/changelog returns (ChangelogResponse)
+
+	@handler Config
+	get /api/config returns (ConfigResponse)
+}
+
+@server (
+	prefix: /api/v1
+)
+service Chat {
+	@handler GetPrompt
+	get /prompts returns (PromptResponse)
+
+	@handler GetDefaultModels
+	post /configs/default/models (DefaultModels) returns (DefaultModels)
 }
 
 @server (
@@ -77,7 +149,7 @@ service Chat {
 	delete /chats/:id (RemoveRequest) returns (RemoveResponse)
 
 	@handler List
-	get /chats (ListRequest) returns (ListResponse)
+	get /chats (ListRequest) returns ([]Chat)
 
 	@handler Detail
 	get /chats/:id (DetailRequest) returns (DetailResponse)

@@ -16,4 +16,6 @@ type Config struct {
 	LogConf logc.LogConf
 
 	ChatRpc zrpc.RpcClientConf
+
+	OllUrl string
 }

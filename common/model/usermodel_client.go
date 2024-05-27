@@ -43,6 +43,8 @@ type (
 		Name       string    `db:"name"`     // 用户姓名
 		Email string `db:"email"`
 		Password   string    `db:"password"` // 用户密码
+        Role string `db:"role"`
+        Profile_image_url string `db:"profile_image_url"`
 		CreateTime time.Time `db:"create_time"`
 		UpdateTime time.Time `db:"update_time"`
 	}

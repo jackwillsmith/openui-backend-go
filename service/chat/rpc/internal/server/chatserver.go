@@ -47,6 +47,11 @@ func (s *ChatServer) ListChat(ctx context.Context, in *chat.Empty) (*chat.ListCh
 	return l.ListChat(in)
 }
 
+func (s *ChatServer) ListPrompt(ctx context.Context, in *chat.Empty) (*chat.ListPrompts, error) {
+	l := logic.NewListPromptLogic(ctx, s.svcCtx)
+	return l.ListPrompt(in)
+}
+
 func (s *ChatServer) Call(ctx context.Context, in *chat.CallRequest) (*chat.CallResponse, error) {
 	l := logic.NewCallLogic(ctx, s.svcCtx)
 	return l.Call(in)

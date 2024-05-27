@@ -24,7 +24,6 @@ func NewChangelogLogic(ctx context.Context, svcCtx *svc.ServiceContext) *Changel
 }
 
 func (l *ChangelogLogic) Changelog() (resp *types.ChangelogResponse, err error) {
-	// todo: add your logic here and delete this line
-
+	resp = &types.ChangelogResponse{}
 	return
 }

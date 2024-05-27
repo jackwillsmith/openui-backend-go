@@ -50,6 +50,7 @@ func (l *LoginLogic) Login(req *types.LoginRequest) (resp *types.LoginResponse, 
 	return &types.LoginResponse{
 		Id:    res.Id,
 		Name:  res.Name,
+		Role:  res.Role,
 		Token: accessToken,
 	}, nil
 }

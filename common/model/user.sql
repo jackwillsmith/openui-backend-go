@@ -3,6 +3,8 @@ CREATE TABLE `user` (
                         `name` varchar(255)  NOT NULL DEFAULT '' COMMENT '用户姓名',
                         `email` varchar(255)  NOT NULL DEFAULT '' COMMENT '用户电话',
                         `password` varchar(255)  NOT NULL DEFAULT '' COMMENT '用户密码',
+                        `role` varchar(264)  NOT NULL DEFAULT '' COMMENT '用户角色',
+                        `profile_image_url` varchar(255)  NOT NULL DEFAULT '' COMMENT '用户头像',
                         `create_time` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
                         `update_time` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
                         PRIMARY KEY (`id`),

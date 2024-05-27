@@ -24,6 +24,7 @@ func NewVersionLogic(ctx context.Context, svcCtx *svc.ServiceContext) *VersionLo
 }
 
 func (l *VersionLogic) Version() (resp *types.VersionResponse, err error) {
+	resp = &types.VersionResponse{}
 	resp.Version = "0.1.32"
 	return
 }

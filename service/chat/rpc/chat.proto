@@ -69,12 +69,26 @@ message CallResponse {
     string Text = 1;
 }
 
+message Prompt {
+    int64 Id = 1;
+    string Command = 2;
+    string Title = 3;
+    string UserId = 4;
+    string Content = 5;
+}
+
+message ListPrompts{
+    repeated Prompt List = 1;
+}
+
 service Chat {
     rpc Create(CreateRequest) returns(CreateResponse);
     rpc Update(UpdateRequest) returns(UpdateResponse);
     rpc Remove(RemoveRequest) returns(RemoveResponse);
     rpc Detail(DetailRequest) returns(DetailResponse);
+
     rpc ListChat(Empty) returns(ListChats);
+    rpc ListPrompt(Empty) returns(ListPrompts);
 
     rpc Call(CallRequest) returns(CallResponse);
 }
