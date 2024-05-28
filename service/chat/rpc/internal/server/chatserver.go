@@ -56,3 +56,8 @@ func (s *ChatServer) Call(ctx context.Context, in *chat.CallRequest) (*chat.Call
 	l := logic.NewCallLogic(ctx, s.svcCtx)
 	return l.Call(in)
 }
+
+func (s *ChatServer) GenPrompt(ctx context.Context, in *chat.NewChatEntity) (*chat.CallResponse, error) {
+	l := logic.NewGenPromptLogic(ctx, s.svcCtx)
+	return l.GenPrompt(in)
+}

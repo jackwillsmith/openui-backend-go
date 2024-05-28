@@ -81,6 +81,19 @@ message ListPrompts{
     repeated Prompt List = 1;
 }
 
+message NewChatEntity {
+    string Model = 1;
+    repeated MessagesEntity Messages = 2;
+    OptionsEntity Options = 3;
+}
+
+message MessagesEntity {
+    string Role = 1;
+    string Content = 2;
+}
+
+message OptionsEntity {}
+
 service Chat {
     rpc Create(CreateRequest) returns(CreateResponse);
     rpc Update(UpdateRequest) returns(UpdateResponse);
@@ -91,4 +104,6 @@ service Chat {
     rpc ListPrompt(Empty) returns(ListPrompts);
 
     rpc Call(CallRequest) returns(CallResponse);
+
+    rpc GenPrompt(NewChatEntity) returns(CallResponse);
 }

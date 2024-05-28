@@ -22,6 +22,9 @@ type (
 	Empty          = chat.Empty
 	ListChats      = chat.ListChats
 	ListPrompts    = chat.ListPrompts
+	MessagesEntity = chat.MessagesEntity
+	NewChatEntity  = chat.NewChatEntity
+	OptionsEntity  = chat.OptionsEntity
 	Prompt         = chat.Prompt
 	RemoveRequest  = chat.RemoveRequest
 	RemoveResponse = chat.RemoveResponse
@@ -36,6 +39,7 @@ type (
 		ListChat(ctx context.Context, in *Empty, opts ...grpc.CallOption) (*ListChats, error)
 		ListPrompt(ctx context.Context, in *Empty, opts ...grpc.CallOption) (*ListPrompts, error)
 		Call(ctx context.Context, in *CallRequest, opts ...grpc.CallOption) (*CallResponse, error)
+		GenPrompt(ctx context.Context, in *NewChatEntity, opts ...grpc.CallOption) (*CallResponse, error)
 	}
 
 	defaultChat struct {
@@ -82,4 +86,9 @@ func (m *defaultChat) ListPrompt(ctx context.Context, in *Empty, opts ...grpc.Ca
 func (m *defaultChat) Call(ctx context.Context, in *CallRequest, opts ...grpc.CallOption) (*CallResponse, error) {
 	client := chat.NewChatClient(m.cli.Conn())
 	return client.Call(ctx, in, opts...)
+}
+
+func (m *defaultChat) GenPrompt(ctx context.Context, in *NewChatEntity, opts ...grpc.CallOption) (*CallResponse, error) {
+	client := chat.NewChatClient(m.cli.Conn())
+	return client.GenPrompt(ctx, in, opts...)
 }

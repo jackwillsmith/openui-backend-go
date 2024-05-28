@@ -12,6 +12,17 @@ type Chat struct {
 	CreatedAt int    `json:"created_at"`
 }
 
+type ChatEntity struct {
+	Id        string                   `json:"id"`
+	Title     string                   `json:"title"`
+	Models    []string                 `json:"models"`
+	Options   map[string]interface{}   `json:"options,optional"`
+	Messages  []map[string]interface{} `json:"messages,optional"`
+	History   map[string]interface{}   `json:"history,optional"`
+	Tags      []map[string]interface{} `json:"tags,optional"`
+	Timestamp int64                    `json:"timestamp"`
+}
+
 type ChatMessage struct {
 	Chats Chat `json:"chats"`
 }
@@ -76,8 +87,10 @@ type ListResponse struct {
 	Data []DetailResponse `json:"data"`
 }
 
-type Model struct {
+type ModelDetail struct {
+	Id         string  `json:"id"`
 	Name       string  `json:"name"`
+	Model      string  `json:"model"`
 	ModifiedAt string  `json:"modified_at"`
 	Size       int64   `json:"size"`
 	Digest     string  `json:"digest"`
@@ -85,7 +98,11 @@ type Model struct {
 }
 
 type ModelReponse struct {
-	Models []Model `json:"models"`
+	Models []ModelDetail `json:"models"`
+}
+
+type NewChatRequest struct {
+	Chat ChatEntity `json:"chat"`
 }
 
 type Prompt struct {

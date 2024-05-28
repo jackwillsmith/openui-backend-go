@@ -67,10 +67,12 @@ type (
 		Content string   `json:"content"`
 	}
 	ModelReponse {
-		Models []Model `json:"models"`
+		Models []ModelDetail `json:"models"`
 	}
-	Model {
+	ModelDetail {
+		Id         string  `json:"id"`
 		Name       string  `json:"name"`
+		Model      string  `json:"model"`
 		ModifiedAt string  `json:"modified_at"`
 		Size       int64   `json:"size"`
 		Digest     string  `json:"digest"`
@@ -105,6 +107,36 @@ type (
 	ChatMessage {
 		Chats Chat `json:"chats"`
 	}
+	NewChatRequest {
+		Chat ChatEntity `json:"chat"`
+	}
+	ChatEntity {
+		Id        string                   `json:"id"`
+		Title     string                   `json:"title"`
+		Models    []string                 `json:"models"`
+		Options   map[string]interface{}   `json:"options,optional"`
+		Messages  []map[string]interface{} `json:"messages,optional"`
+		History   map[string]interface{}   `json:"history,optional"`
+		Tags      []map[string]interface{} `json:"tags,optional"`
+		Timestamp int64                    `json:"timestamp"`
+	}
+
+    // new chat
+    NewChatEntity {
+        Model string `json:"model"`
+        Messages []MessagesEntity `json:"messages"`
+        Options OptionsEntity `json:"options"`
+    }
+
+    MessagesEntity {
+        Role string `json:"role"`
+        Content string `json:"content"`
+    }
+    OptionsEntity struct {}
+
+    ChatRespone {
+        Text string `json:"text"`
+    }
 )
 
 service Chat {
@@ -113,6 +145,9 @@ service Chat {
 
 	@handler OllTags
 	get /ollama/api/tags returns (ModelReponse)
+
+    @handler Chat
+    post /ollama/api/chat (NewChatEntity) returns (ChatRespone)
 }
 
 service Chat {
@@ -140,7 +175,7 @@ service Chat {
 )
 service Chat {
 	@handler Create
-	post /chats/new (CreateRequest) returns (CreateResponse)
+	post /chats/new (NewChatRequest) returns (CreateResponse)
 
 	@handler Update
 	post /chats/:id (UpdateRequest) returns (UpdateResponse)
