@@ -6,6 +6,8 @@ Etcd:
         - 192.168.152.129:2389
     Key: user.rpc
 
+Timeout: 0
+
 Mysql:
     Host: 192.168.152.129
     Port: 3306

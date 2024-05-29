@@ -13,6 +13,11 @@ func RegisterHandlers(server *rest.Server, serverCtx *svc.ServiceContext) {
 	server.AddRoutes(
 		[]rest.Route{
 			{
+				Method:  http.MethodPost,
+				Path:    "/ollama/api/chat",
+				Handler: ChatHandler(serverCtx),
+			},
+			{
 				Method:  http.MethodGet,
 				Path:    "/ollama/api/tags",
 				Handler: OllTagsHandler(serverCtx),

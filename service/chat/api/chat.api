@@ -13,12 +13,7 @@ type (
 	// 产品创建
 	// 产品修改
 	UpdateRequest {
-		Id       int64  `json:"id"`
-		UserId   string `json:"userId"`
-		Title    string `json:"title"`
-		Chat     string `json:"chat"`
-		ShareId  string `json:"shareId"`
-		Archived int64  `json:"archived"`
+		Chat string `json:"chat"`
 	}
 	UpdateResponse  {}
 	// 产品修改
@@ -120,23 +115,38 @@ type (
 		Tags      []map[string]interface{} `json:"tags,optional"`
 		Timestamp int64                    `json:"timestamp"`
 	}
-
-    // new chat
-    NewChatEntity {
-        Model string `json:"model"`
-        Messages []MessagesEntity `json:"messages"`
-        Options OptionsEntity `json:"options"`
-    }
-
-    MessagesEntity {
-        Role string `json:"role"`
-        Content string `json:"content"`
-    }
-    OptionsEntity struct {}
-
-    ChatRespone {
-        Text string `json:"text"`
-    }
+	// new chat
+	NewChatEntity {
+		Model    string           `json:"model"`
+		Messages []MessagesEntity `json:"messages"`
+		Options  OptionsEntity    `json:"options"`
+	}
+	MessagesEntity {
+		Role    string `json:"role"`
+		Content string `json:"content"`
+	}
+	OptionsEntity  {}
+	ChatRespone {
+		Text string `json:"text"`
+	}
+	UpdateChatRequest {
+		Chat UpdateChat `json:"chat"`
+	}
+	UpdateChat {
+		Messages []UpdateMessages `json:"messages"`
+		History  UpdateHistory    `json:"history"`
+	}
+	UpdateMessages {
+		Id          string   `json:"id"`
+		ChildrenIds []string `json:"childrenIds"`
+		Role        string   `json:"role"`
+		Content     string   `json:"content"`
+		Timestamp   int64    `json:"timestamp"`
+	}
+	UpdateHistory {
+		Messages  map[string]interface{} `json:"messages"`
+		CurrentId string                 `json:"currentId"`
+	}
 )
 
 service Chat {
@@ -146,8 +156,8 @@ service Chat {
 	@handler OllTags
 	get /ollama/api/tags returns (ModelReponse)
 
-    @handler Chat
-    post /ollama/api/chat (NewChatEntity) returns (ChatRespone)
+	@handler Chat
+	post /ollama/api/chat (NewChatEntity) returns (ChatRespone)
 }
 
 service Chat {
@@ -178,7 +188,7 @@ service Chat {
 	post /chats/new (NewChatRequest) returns (CreateResponse)
 
 	@handler Update
-	post /chats/:id (UpdateRequest) returns (UpdateResponse)
+	post /chats/:id (UpdateChatRequest) returns (UpdateResponse)
 
 	@handler Remove
 	delete /chats/:id (RemoveRequest) returns (RemoveResponse)

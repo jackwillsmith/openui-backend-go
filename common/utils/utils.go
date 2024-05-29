@@ -1,6 +1,9 @@
 package utils
 
-import "github.com/google/uuid"
+import (
+	"github.com/google/uuid"
+	"time"
+)
 
 var ollurl string
 
@@ -15,4 +18,8 @@ func GetOllUrl() string {
 // uuid库创建随机 uuid
 func GengerateUUID() string {
 	return uuid.New().String()
+}
+
+func GetNowTime() time.Time {
+	return time.Now()
 }

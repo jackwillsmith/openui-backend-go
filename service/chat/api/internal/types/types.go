@@ -27,6 +27,10 @@ type ChatMessage struct {
 	Chats Chat `json:"chats"`
 }
 
+type ChatRespone struct {
+	Text string `json:"text"`
+}
+
 type ConfigResponse struct {
 	Status                   bool                       `json:"status"`
 	Name                     string                     `json:"name"`
@@ -87,6 +91,11 @@ type ListResponse struct {
 	Data []DetailResponse `json:"data"`
 }
 
+type MessagesEntity struct {
+	Role    string `json:"role"`
+	Content string `json:"content"`
+}
+
 type ModelDetail struct {
 	Id         string  `json:"id"`
 	Name       string  `json:"name"`
@@ -101,8 +110,17 @@ type ModelReponse struct {
 	Models []ModelDetail `json:"models"`
 }
 
+type NewChatEntity struct {
+	Model    string           `json:"model"`
+	Messages []MessagesEntity `json:"messages"`
+	Options  OptionsEntity    `json:"options"`
+}
+
 type NewChatRequest struct {
 	Chat ChatEntity `json:"chat"`
+}
+
+type OptionsEntity struct {
 }
 
 type Prompt struct {
@@ -124,13 +142,30 @@ type RemoveRequest struct {
 type RemoveResponse struct {
 }
 
+type UpdateChat struct {
+	Messages []UpdateMessages `json:"messages"`
+	History  UpdateHistory    `json:"history"`
+}
+
+type UpdateChatRequest struct {
+	Chat UpdateChat `json:"chat"`
+}
+
+type UpdateHistory struct {
+	Messages  map[string]interface{} `json:"messages"`
+	CurrentId string                 `json:"currentId"`
+}
+
+type UpdateMessages struct {
+	Id          string   `json:"id"`
+	ChildrenIds []string `json:"childrenIds"`
+	Role        string   `json:"role"`
+	Content     string   `json:"content"`
+	Timestamp   int64    `json:"timestamp"`
+}
+
 type UpdateRequest struct {
-	Id       int64  `json:"id"`
-	UserId   string `json:"userId"`
-	Title    string `json:"title"`
-	Chat     string `json:"chat"`
-	ShareId  string `json:"shareId"`
-	Archived int64  `json:"archived"`
+	Chat string `json:"chat"`
 }
 
 type UpdateResponse struct {
