@@ -66,9 +66,10 @@ func (m *defaultChatModel) Delete(ctx context.Context, id int64) error {
 }
 
 func (m *defaultChatModel) FindOne(ctx context.Context, id int64) (*Chat, error) {
-    chat := Chat{}
-    sql := "id = ?"
-    err := m.db.First(ctx, m.table, &chat, sql, id)
+    chat := Chat{
+        Id: id,
+    }
+    err := m.db.First(ctx, m.table, &chat, chat)
     if err != nil {
         return nil, err
     }

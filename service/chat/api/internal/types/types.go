@@ -31,6 +31,12 @@ type ChatRespone struct {
 	Text string `json:"text"`
 }
 
+type CompleteRequest struct {
+	Model    string           `json:"model"`
+	Messages []MessagesEntity `json:"messages"`
+	Stream   bool             `json:"stream"`
+}
+
 type ConfigResponse struct {
 	Status                   bool                       `json:"status"`
 	Name                     string                     `json:"name"`
@@ -64,7 +70,7 @@ type DefaultPromptSuggestions struct {
 }
 
 type DetailRequest struct {
-	Id int64 `json:"id"`
+	Id int64 `json:"id, optional"`
 }
 
 type DetailResponse struct {
@@ -136,15 +142,15 @@ type PromptResponse struct {
 }
 
 type RemoveRequest struct {
-	Id int64 `json:"id"`
+	Id int64 `json:"id, optional"`
 }
 
 type RemoveResponse struct {
 }
 
 type UpdateChat struct {
-	Messages []UpdateMessages `json:"messages"`
-	History  UpdateHistory    `json:"history"`
+	Messages []UpdateMessages `json:"messages, optional"`
+	History  UpdateHistory    `json:"history, optional"`
 }
 
 type UpdateChatRequest struct {

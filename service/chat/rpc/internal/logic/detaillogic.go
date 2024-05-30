@@ -2,6 +2,7 @@ package logic
 
 import (
 	"context"
+	"github.com/zeromicro/go-zero/core/logc"
 
 	"github.com/openui-backend-go/service/chat-rpc/chat"
 	"github.com/openui-backend-go/service/chat-rpc/internal/svc"
@@ -24,7 +25,22 @@ func NewDetailLogic(ctx context.Context, svcCtx *svc.ServiceContext) *DetailLogi
 }
 
 func (l *DetailLogic) Detail(in *chat.DetailRequest) (*chat.DetailResponse, error) {
-	// todo: add your logic here and delete this line
+	id := in.Id
+	// 调用 mysql 方法
+	res, err := l.svcCtx.ChatModel.FindOne(l.ctx, id)
+	if err != nil {
+		logc.Error(l.ctx, "DetailLogic.Detail", "err: %v", err)
+		return nil, err
+	}
 
-	return &chat.DetailResponse{}, nil
+	resp := &chat.DetailResponse{
+		Id:       res.Id,
+		Title:    res.Title,
+		ShareId:  res.ShareId,
+		UserId:   res.UserId,
+		Chat:     res.Chat,
+		Archived: res.Archived,
+	}
+
+	return resp, nil
 }

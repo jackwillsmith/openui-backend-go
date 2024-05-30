@@ -9,23 +9,22 @@ import (
 	"github.com/zeromicro/go-zero/core/logx"
 )
 
-type ChangelogLogic struct {
+type CompleteLogic struct {
 	logx.Logger
 	ctx    context.Context
 	svcCtx *svc.ServiceContext
 }
 
-func NewChangelogLogic(ctx context.Context, svcCtx *svc.ServiceContext) *ChangelogLogic {
-	return &ChangelogLogic{
+func NewCompleteLogic(ctx context.Context, svcCtx *svc.ServiceContext) *CompleteLogic {
+	return &CompleteLogic{
 		Logger: logx.WithContext(ctx),
 		ctx:    ctx,
 		svcCtx: svcCtx,
 	}
 }
 
-func (l *ChangelogLogic) Changelog() (resp *types.ChangelogResponse, err error) {
-	resp = &types.ChangelogResponse{
-		Changelog: "1.0.0",
-	}
+func (l *CompleteLogic) Complete(req *types.CompleteRequest) (resp *types.ChatRespone, err error) {
+	// todo: add your logic here and delete this line
+
 	return
 }
