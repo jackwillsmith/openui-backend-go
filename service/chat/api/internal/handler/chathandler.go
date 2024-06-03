@@ -3,8 +3,9 @@ package handler
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/openui-backend-go/common/consts"
 	"net/http"
+
+	"github.com/openui-backend-go/common/consts"
 
 	"github.com/openui-backend-go/common/callmodel"
 	"github.com/openui-backend-go/common/utils"
@@ -55,7 +56,7 @@ func ChatHandler(svcCtx *svc.ServiceContext) http.HandlerFunc {
 					// 如果msgChan被关闭，则结束流式传输
 					return
 				}
-				fmt.Print(msg)
+				// fmt.Print(msg)
 				msgResp := consts.MessageEntity{
 					Content: msg,
 					Role:    consts.ASSISTANT,

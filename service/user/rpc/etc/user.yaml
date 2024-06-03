@@ -3,14 +3,14 @@ ListenOn: 0.0.0.0:9001
 
 Etcd:
     Hosts:
-        - 192.168.152.129:2389
+        - 192.168.31.101:2379
     Key: user.rpc
 
 Timeout: 0
 
 Mysql:
-    Host: 192.168.152.129
-    Port: 3306
+    Host: 192.168.31.101
+    Port: 3309
     DbName: openui
     User: root
     Password: "123456"
@@ -27,7 +27,7 @@ Mysql:
 CacheRedis:
     Name: "openui"
     Nettype: "tcp"
-    Address: "192.168.152.129:6379"
+    Address: "192.168.31.101:6379"
     Auth: ""
     DB: 0
 
