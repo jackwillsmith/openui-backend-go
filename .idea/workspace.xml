@@ -5,20 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2cbffd38-95a8-4346-ac5a-d47e5b5f3fa7" name="更改" comment="">
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/callmodel/gemma.go" beforeDir="false" afterPath="$PROJECT_DIR$/common/callmodel/gemma.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/consts/consts.go" beforeDir="false" afterPath="$PROJECT_DIR$/common/consts/consts.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/utils/utils.go" beforeDir="false" afterPath="$PROJECT_DIR$/common/utils/utils.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/chat/api/chat.api" beforeDir="false" afterPath="$PROJECT_DIR$/service/chat/api/chat.api" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/chat/api/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/service/chat/api/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/chat/api/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/service/chat/api/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/chat/api/internal/handler/routes.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/chat/api/internal/handler/routes.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/chat/api/internal/handler/updatehandler.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/chat/api/internal/handler/updatehandler.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/chat/api/internal/logic/updatelogic.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/chat/api/internal/logic/updatelogic.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/chat/api/internal/types/types.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/chat/api/internal/types/types.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/chat/rpc/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/service/chat/rpc/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/chat/rpc/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/service/chat/rpc/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/user/rpc/etc/user.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/service/user/rpc/etc/user.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +46,7 @@
     "git-widget-placeholder": "master",
     "go.import.settings.migrated": "true",
     "go.sdk.automatically.set": "true",
-    "last_opened_file_path": "E:/project/src/go-ollama",
+    "last_opened_file_path": "E:/project/src/openui-backend-go",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
@@ -76,11 +64,11 @@
       <recent name="E:\project\src\openui-backend-go\service\user\model" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\project\src\openui-backend-go\nginx" />
+      <recent name="E:\project\src\openui-backend-go" />
       <recent name="E:\project\src\openui-backend-go\service\chat\rpc" />
       <recent name="E:\project\src\openui-backend-go\common" />
       <recent name="E:\project\src\openui-backend-go\common\jwt" />
-      <recent name="E:\project\src\openui-backend-go\common\const" />
-      <recent name="E:\project\src\openui-backend-go\api" />
     </key>
   </component>
   <component name="RunManager">
