@@ -1,6 +1,9 @@
-Name: User
-Host: 0.0.0.0
-Port: 8081
+Name: chat.rpc
+ListenOn: 0.0.0.0:9002
+Etcd:
+    Hosts:
+        - xxxxxxxxxxxxxxxxxxxxxxxxx:2379
+    Key: chat.rpc
 
 Mysql:
     Host: xxxxxxxxxxxxxx
@@ -25,13 +28,11 @@ CacheRedis:
     Auth: ""
     DB: 0
 
-Auth:
-    AccessSecret: xxxxxxxxxxxxxxxxxxxxxxxxx
-    AccessExpire: 86400
+Salt: HWVOFkGgLKAIOSCwd7qnJaZR9KQ2i8xe
 
 #日志配置
 LogConf:
-    ServiceName: user.api
+    ServiceName: chat.rpc
     Mode: file
     TimeFormat: 2006-01-02 15:04:05.000
     Path: logs
@@ -39,10 +40,3 @@ LogConf:
     Compress: true
     Stat: false # 不记录CPU、内存等信息
     KeepDays: 10
-    MaxBackups: 2
-
-UserRpc:
-    Etcd:
-        Hosts:
-            - xxxxxxxxxxxxxxxxxxxxxxxxx:2379
-        Key: user.rpc

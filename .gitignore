@@ -31,5 +31,5 @@ go.work
 **/*.json
 **/launch.json
 
-**/etc/
-**/*.yaml
+# **/etc/
+# **/*.yaml

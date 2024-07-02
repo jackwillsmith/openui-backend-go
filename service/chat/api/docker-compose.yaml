@@ -1,0 +1,22 @@
+version: "3.1"
+services:
+    ucenter-rpc:
+        container_name: dcv3_ucenter_rpc_service
+        image: dc01.iotdreamcatcher.net.cn:6443/cloud/rpc/user-rpc:latest
+        restart: on-failure
+        ports:
+            - 8080:8080
+        volumes:
+            - /etc/localtime:/etc/localtime:ro
+            - /opt/soft/chuango/deploy/ucenter-rpc/etc:/app/etc
+            - /opt/soft/chuango/deploy/ucenter-rpc/logs:/app/logs
+        healthcheck:
+            test: [ "CMD", "curl", "-f", "http://localhost:6470/healthz" ]
+            interval: 1m30s
+            timeout: 10s
+            retries: 3
+
+networks:
+    default:
+        external:
+            name: trident_bridge_network

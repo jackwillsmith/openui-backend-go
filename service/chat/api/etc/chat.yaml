@@ -1,6 +1,8 @@
-Name: User
+Name: Chat
 Host: 0.0.0.0
-Port: 8081
+Port: 8082
+
+Timeout: 0
 
 Mysql:
     Host: xxxxxxxxxxxxxx
@@ -31,7 +33,7 @@ Auth:
 
 #日志配置
 LogConf:
-    ServiceName: user.api
+    ServiceName: chat.api
     Mode: file
     TimeFormat: 2006-01-02 15:04:05.000
     Path: logs
@@ -41,8 +43,10 @@ LogConf:
     KeepDays: 10
     MaxBackups: 2
 
-UserRpc:
+ChatRpc:
     Etcd:
         Hosts:
             - xxxxxxxxxxxxxxxxxxxxxxxxx:2379
-        Key: user.rpc
+        Key: chat.rpc
+
+OllUrl: "http://xxxxxxxxxxxxxx:11434"

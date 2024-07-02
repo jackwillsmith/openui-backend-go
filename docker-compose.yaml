@@ -1,0 +1,101 @@
+version: '3.8'
+
+services:
+    user-rpc:
+        volumes:
+            - ./user-rpc/etc:/app/etc
+            - ./user-rpc/logs:/app/logs
+        container_name: openui-user-rpc
+        tty: true
+        ports:
+            - 9001:9001
+        restart: always
+        privileged: true
+        image: eilinge/open-ui-user-rpc:latest
+        depends_on:
+            - redis
+        networks:
+            - default
+
+    user-api:
+        volumes:
+            - ./user-api/etc:/app/etc
+            - ./user-api/logs:/app/logs
+        container_name: openui-user-api
+        tty: true
+        restart: always
+        privileged: true
+        ports:
+            - 9081:9081
+        image: eilinge/open-ui-user-api:latest
+        depends_on:
+            - redis
+            - user-rpc
+        networks:
+            - default
+
+    chat-rpc:
+        volumes:
+            - ./chat-rpc/etc:/app/etc
+            - ./chat-rpc/logs:/app/logs
+        container_name: openui-chat-rpc
+        tty: true
+        ports:
+            - 9002:9002
+        restart: always
+        privileged: true
+        image: eilinge/open-ui-chat-rpc:latest
+        depends_on:
+            - redis
+        networks:
+            - default
+
+    chat-api:
+        volumes:
+            - ./chat-api/etc:/app/etc
+            - ./chat-api/logs:/app/logs
+        container_name: openui-chat-api
+        tty: true
+        restart: always
+        privileged: true
+        ports:
+            - 9082:9082
+        image: eilinge/open-ui-chat-api:latest
+        depends_on:
+            -   redis
+            -   chat-rpc
+        networks:
+            - default
+
+    redis:
+        volumes:
+            -   ./redis/data:/data
+        container_name: openui-redis
+        tty: true
+        restart: always
+        privileged: true
+        image: redis:latest
+        networks:
+            - default
+
+    nginx:
+        restart: always
+        container_name: nginx
+        image: nginx
+        ports:
+            - 8080:80
+            - 443:443
+        volumes:
+            - ./conf/nginx.conf/:/etc/nginx/nginx.conf
+            - /etc/nginx/etc/cert:/etc/nginx/cert
+            - ./conf/conf.d:/etc/nginx/conf.d
+        environment:
+            - TZ=Asia/Shanghai
+        privileged: true
+        networks:
+            - default
+
+networks:
+    default:
+        external: true
+        name: openui-backend_default
