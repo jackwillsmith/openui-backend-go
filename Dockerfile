@@ -14,11 +14,11 @@ WORKDIR /build
 
 ADD ${AppDir}/go.mod .
 ADD ${AppDir}/go.sum .
-ADD core .
+ADD common .
 
 RUN go mod tidy && go mod download
 
-COPY service/chat/api .
+COPY . .
 COPY ${AppDir}/etc /app/etc
 
 RUN cd ${AppDir} && go build -ldflags="-s -w" -o /app/app

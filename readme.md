@@ -22,3 +22,9 @@ openui-backend-go is a RESTful API service that provides the backend for the ope
 
 - User authentication
 - Model management
+
+## 4. build image
+
+build owner image
+
+- `docker build -t eilinge/open-ui-user-api --build-arg AppDir=service/user/api .`
